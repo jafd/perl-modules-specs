@@ -7,7 +7,10 @@ Group:          Development/Libraries
 URL:            https://search.cpan.org/dist/Parse-Keyword/
 Source0:        https://www.cpan.org/authors/id/H/HA/HAARG/Parse-Keyword-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires:  perl >= 0:5.014
+BuildRequires:  perl-interpreter >= 0:5.014
+BuildRequires:  gcc
+BuildRequires:  perl-devel
+BuildRequires:  perl-generators
 BuildRequires:  perl(base)
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Devel::CallParser)
