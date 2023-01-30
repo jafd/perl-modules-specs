@@ -30,6 +30,8 @@ Requires:       perl(strict)
 Requires:       perl(warnings)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
+Provides:       perl(Devel::CallParser)
+
 Patch0:         Devel-CallParser-0.002-rt110623.patch
 
 %description
