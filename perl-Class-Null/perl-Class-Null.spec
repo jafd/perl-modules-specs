@@ -8,7 +8,8 @@ URL:            https://search.cpan.org/dist/Class-Null/
 Source0:        https://www.cpan.org/authors/id/M/MA/MARCEL/Class-Null-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-BuildRequires:  perl >= 0:5.008
+BuildRequires:  perl-interpreter >= 0:5.008
+BuildRequires:  perl-generators
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(English)
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -19,6 +20,8 @@ BuildRequires:  perl(Scalar::Util)
 BuildRequires:  perl(Test::More) >= 0.94
 Requires:       perl(overload)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+
+%{?perl_default_filter}
 
 %description
 This class implements the Null Class design pattern.

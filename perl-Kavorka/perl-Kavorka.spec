@@ -8,7 +8,8 @@ URL:            https://search.cpan.org/dist/Kavorka/
 Source0:        https://www.cpan.org/authors/id/T/TO/TOBYINK/Kavorka-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
-BuildRequires:  perl >= 0:5.014
+BuildRequires:  perl-interpreter >= 0:5.014
+BuildRequires:  perl-generators
 BuildRequires:  perl(Exporter::Tiny) >= 0.026
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(match::simple)
@@ -42,6 +43,8 @@ Requires:       perl(Types::Standard) >= 0.032
 Requires:       perl(Type::Tiny::XS) >= 0.010
 Requires:       perl(Type::Utils) >= 0.032
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+
+%{?perl_default_filter}
 
 %description
 Kavorka provides fun and method keywords for declaring functions and
