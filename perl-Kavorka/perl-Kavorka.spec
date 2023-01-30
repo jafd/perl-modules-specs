@@ -8,6 +8,9 @@ URL:            https://search.cpan.org/dist/Kavorka/
 Source0:        https://www.cpan.org/authors/id/T/TO/TOBYINK/Kavorka-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+BuildRequires:  make
+BuildRequires:  findutils
+BuildRequires:  coreutils
 BuildRequires:  perl-interpreter >= 0:5.014
 BuildRequires:  perl-generators
 BuildRequires:  perl(Exporter::Tiny) >= 0.026

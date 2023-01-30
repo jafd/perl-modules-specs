@@ -11,6 +11,9 @@ BuildRequires:  perl-interpreter >= 0:5.014
 BuildRequires:  gcc
 BuildRequires:  perl-devel
 BuildRequires:  perl-generators
+BuildRequires:  make
+BuildRequires:  findutils
+BuildRequires:  coreutils
 BuildRequires:  perl(base)
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Devel::CallParser)
