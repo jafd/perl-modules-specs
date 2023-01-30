@@ -10,6 +10,9 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-interpreter >= 0:5.008
 BuildRequires:  perl-generators
+BuildRequires:  make
+BuildRequires:  coreutils
+BuildRequires:  findutils
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(English)
 BuildRequires:  perl(ExtUtils::MakeMaker)
