@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Custom parsing attached to subroutines
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Devel-CallParser/
-Source0:        http://www.cpan.org/authors/id/Z/ZE/ZEFRAM/Devel-CallParser-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Devel-CallParser/
+Source0:        https://www.cpan.org/authors/id/Z/ZE/ZEFRAM/Devel-CallParser-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  perl >= 0:5.011002
 BuildRequires:  perl(Devel::CallChecker) >= 0.002
