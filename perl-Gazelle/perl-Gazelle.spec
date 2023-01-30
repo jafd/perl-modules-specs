@@ -32,6 +32,8 @@ Requires:       perl(Server::Starter)
 Requires:       perl(Stream::Buffered)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
+%{?perl_default_filter}
+
 %description
 Gazelle is a PSGI Handler. It is derivied from Starlet. A lot of its code
 was rewritten or optimized by converting it to XS code.
