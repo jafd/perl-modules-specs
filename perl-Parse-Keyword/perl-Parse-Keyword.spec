@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        DEPRECATED: write syntax extensions in perl
 License:        MIT
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Parse-Keyword/
-Source0:        http://www.cpan.org/authors/id/H/HA/HAARG/Parse-Keyword-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Parse-Keyword/
+Source0:        https://www.cpan.org/authors/id/H/HA/HAARG/Parse-Keyword-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  perl >= 0:5.014
 BuildRequires:  perl(base)

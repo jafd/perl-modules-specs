@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Perl module with simple "word" aware string truncating routine
 License:        CHECK(GPL+ or Artistic)
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Text-Elide/
-Source0:        http://www.cpan.org/authors/id/A/AW/AWRIGLEY/Text-Elide-v%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Text-Elide/
+Source0:        https://www.cpan.org/authors/id/A/AW/AWRIGLEY/Text-Elide-v%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl(ExtUtils::MakeMaker)
