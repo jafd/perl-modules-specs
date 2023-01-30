@@ -46,6 +46,16 @@ Requires:       perl(Types::Standard) >= 0.032
 Requires:       perl(Type::Tiny::XS) >= 0.010
 Requires:       perl(Type::Utils) >= 0.032
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+# Tests
+BuildRequires:  perl(Moose)
+BuildRequires:  perl(Mouse)
+BuildRequires:  perl(MooseX::Types::Moose)
+BuildRequires:  perl(DateTime)
+BuildRequires:  perl(Class::Tiny)
+BuildRequires:  perl(experimental)
+BuildRequires:  perl(Hash::Util)
+BuildRequires:  perl(threads)
+
 
 %{?perl_default_filter}
 
