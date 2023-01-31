@@ -1,8 +1,7 @@
 Name:           perl-Data-Manager
 Version:        0.10
 Release:        1%{?dist}
-Summary:        Marr
-iage of Message::Stack & Data::Verifier
+Summary:        Marriage of Message::Stack & Data::Verifier
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            https://search.cpan.org/dist/Data-Manager/
