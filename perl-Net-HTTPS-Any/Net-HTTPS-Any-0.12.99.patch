@@ -1,0 +1,257 @@
+diff --git a/Changes b/Changes
+index 0bb9412..cd315b1 100644
+--- a/Changes
++++ b/Changes
+@@ -1,4 +1,8 @@
+ Revision history for Net-HTTPS-Any
++0.12.99 Tue Jan 31 16:22:00 EEST 2023
++        - Move back to LWP (and LWP only) because Net::SSLeay is tricky to
++          get to speak modern TLS versions
++        - For tests, use httpbin.org and not google.com
+ 
+ 0.12    Wed Aug  3 12:01:08 PDT 2016
+         - Get rid of the LWP codepath, now just a simple wrapper for
+diff --git a/META.json b/META.json
+index b50a841..f8302f4 100644
+--- a/META.json
++++ b/META.json
+@@ -32,14 +32,18 @@
+       },
+       "runtime" : {
+          "requires" : {
+-            "Net::SSLeay" : "0",
++            "LWP::UserAgent" : "0",
++            "LWP::Protocol::https": "0",
++            "HTTP::Request": "0",
++            "HTTP::Headers": "0",
+             "Test::More" : "0",
+             "Tie::IxHash" : "0",
+-            "URI::Escape" : "0"
++            "URI::Escape" : "0",
++            "URI": "0"
+          }
+       }
+    },
+    "release_status" : "stable",
+-   "version" : "0.12",
++   "version" : "0.12.99",
+    "x_serialization_backend" : "JSON::PP version 2.27300"
+ }
+diff --git a/META.yml b/META.yml
+index 0265b28..88d4a09 100644
+--- a/META.yml
++++ b/META.yml
+@@ -18,9 +18,13 @@ no_index:
+     - t
+     - inc
+ requires:
+-  Net::SSLeay: '0'
++  LWP::UserAgent: '0'
++  LWP::Protocol::https: '0'
++  HTTP::Headers: '0'
++  HTTP::Request: '0'
+   Test::More: '0'
+   Tie::IxHash: '0'
+   URI::Escape: '0'
+-version: '0.12'
++  URI: '5.10'
++version: '0.12.99'
+ x_serialization_backend: 'CPAN::Meta::YAML version 0.012'
+diff --git a/Makefile.PL b/Makefile.PL
+index 3181e4a..56815e9 100644
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -12,16 +12,16 @@ WriteMakefile(
+         'Test::More'  => 0,
+         'URI::Escape' => 0,
+         'Tie::IxHash' => 0,
++        'LWP::UserAgent' => 0,
++        'LWP::Protocol::https' => 0,
++        'HTTP::Headers' => 0,
++        'HTTP::Request' => 0,
++        'URI'           => '5.10',
+         # If you are aware of a way to declare an OR relation in prerequisites,
+         # please tell me, you would be my hero.  it doesn't have to be EU:MM.
+         # 'Net::SSLeay' => 0,
+         # or 'Crypt::SSLeay' => 0,
+         #    'LWP' => 0,
+-
+-        #failing tests is worse, Net::SSLeay appears to finally have emerged
+-        # as best-practice with the release of LWP::Protocol::https that uses
+-        # IO::Socket::SSL and therefore Net::SSLeay
+-        'Net::SSLeay' => 0,
+     },
+     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+     clean               => { FILES => 'Net-HTTPS-Any-*' },
+diff --git a/lib/Net/HTTPS/Any.pm b/lib/Net/HTTPS/Any.pm
+index 8224494..db93126 100644
+--- a/lib/Net/HTTPS/Any.pm
++++ b/lib/Net/HTTPS/Any.pm
+@@ -6,10 +6,24 @@ use base qw( Exporter );
+ use vars qw( @EXPORT_OK );
+ use URI::Escape;
+ use Tie::IxHash;
+-use Net::SSLeay 1.30, qw( get_https post_https make_headers make_form );
++use URI;
++use LWP::UserAgent;
++use HTTP::Headers;
+ 
+ @EXPORT_OK = qw( https_get https_post );
+ 
++sub make_headers {
++    my $result = HTTP::Headers->new();
++    my %headers = @_;
++    for my $k (keys %headers) {
++        $result->header($k => $headers{$k});
++    }
++    return $result;
++}
++
++sub make_form {
++}
++
+ =head1 NAME
+ 
+ Net::HTTPS::Any - Simple HTTPS client
+@@ -128,19 +142,29 @@ sub https_get {
+ 
+     my $headers = make_headers(%headers);
+ 
+-    $Net::SSLeay::trace = $opts->{'debug'}
+-      if exists $opts->{'debug'} && $opts->{'debug'};
++    my $raw_data;
++    if (ref($post_data)) {
++        my $u = URI->new("https://example.com");
++        $u->query_form($post_data);
++        $raw_data = $u->query;
++    }
++
++    my $ua = LWP::UserAgent->new(default_headers => $headers);
++    $ua->env_proxy;
+ 
+-    my( $res_page, $res_code, @res_headers ) =
+-      get_https( $opts->{'host'},
+-                 $opts->{'port'},
+-                 $path,
+-                 $headers,
+-                 #"",
+-                 #$opts->{"Content-Type"},
+-               );
++    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
++    my $uri = URI->new($url);
++    if (ref($post_data)) {
++        $uri->query_form($post_data);
++    } else {
++        $uri->query($post_data);
++    }
++    my $request = HTTP::Request->new("GET", $uri->as_string, $headers);
+ 
+-    $res_code =~ /^(HTTP\S+ )?(.*)/ and $res_code = $2;
++    my $response = $ua->request($request);
++    my $res_page = $response->content;
++    my $res_code = $response->code;
++    my @res_headers = $response->headers->flatten;
+ 
+     return ( $res_page, $res_code, @res_headers );
+ 
+@@ -216,24 +240,23 @@ sub https_post {
+ 
+     my $headers = make_headers(%headers);
+ 
+-    $Net::SSLeay::trace = $opts->{'debug'}
+-      if exists $opts->{'debug'} && $opts->{'debug'};
+-
+-    my $raw_data = ref($post_data) ? make_form(%$post_data) : $post_data;
++    my $raw_data;
++    if (ref($post_data)) {
++        my $u = URI->new("https://example.com");
++        $u->query_form($post_data);
++        $raw_data = $u->query;
++    }
+ 
+-    $Net::SSLeay::trace = $opts->{'debug'}
+-      if exists $opts->{'debug'} && $opts->{'debug'};
++    my $ua = LWP::UserAgent->new(default_headers => $headers);
++    $ua->env_proxy;
+ 
+-    my( $res_page, $res_code, @res_headers ) =
+-      post_https( $opts->{'host'},
+-                  $opts->{'port'},
+-                  $opts->{'path'},
+-                  $headers,
+-                  $raw_data,
+-                  $opts->{"Content-Type"},
+-                );
++    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
++    my $request = HTTP::Request->new("POST", $url, $headers, $raw_data);
+ 
+-    $res_code =~ /^(HTTP\S+ )?(.*)/ and $res_code = $2;
++    my $response = $ua->request($request);
++    my $res_page = $response->content;
++    my $res_code = $response->code;
++    my @res_headers = $response->headers->flatten;
+ 
+     return ( $res_page, $res_code, @res_headers );
+ 
+diff --git a/t/get-netssleay.t b/t/get-netssleay.t
+index 9ca788f..d108a85 100644
+--- a/t/get-netssleay.t
++++ b/t/get-netssleay.t
+@@ -12,9 +12,10 @@ BEGIN {
+ #200
+ 
+ my($content, $response, %headers) = https_get(
+-  { 'host' => 'www.fortify.net',
++  { 'host' => 'httpbin.org',
+     'port' => 443,
+-    'path' => '/sslcheck.html',
++    'path' => '/get',
++    debug => 3,
+   },
+   'net_https_any_test' => 1,
+ );
+@@ -27,9 +28,10 @@ ok( length($content), 'Received content' );
+ #404
+ 
+ my($content2, $response2, %headers2) = https_get(
+-  { 'host' => 'www.fortify.net',
++  { 'host' => 'httpbin.org',
+     'port' => 443,
+-    'path' => '/notfound.html',
++    'path' => '/status/404',
++    debug => 3,
+   },
+   'net_https_any_test' => 1,
+ );
+diff --git a/t/post-netssleay.t b/t/post-netssleay.t
+index 80c2863..0aff063 100644
+--- a/t/post-netssleay.t
++++ b/t/post-netssleay.t
+@@ -11,10 +11,11 @@ BEGIN {
+ 
+ #200
+ my($content, $response, %headers) = https_post(
+-  { 'host' => 'accounts.google.com',
++  { 'host' => 'httpbin.org',
+     'port' => 443,
+-    'path' => '/ServiceLogin',
++    'path' => '/post',
+     'args' => { 'posted' => 'data' },
++    debug => 2,
+   },
+   'net_https_any_test' => 1,
+ );
+@@ -27,10 +28,11 @@ ok( length($content), 'Received content' );
+ #404
+ 
+ my($content2, $response2, %headers2) = https_post(
+-  { 'host' => 'www.google.com',
++  { 'host' => 'httpbin.org',
+     'port' => 443,
+-    'path' => '/notfound.html',
++    'path' => '/status/404',
+     'args' => { 'length' => 'required' },
++    debug => 3,
+   },
+   'net_https_any_test' => 1,
+ );
