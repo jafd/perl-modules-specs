@@ -8,6 +8,11 @@ URL:            https://search.cpan.org/dist/Text-Elide/
 Source0:        https://www.cpan.org/authors/id/A/AW/AWRIGLEY/Text-Elide-v%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+BuildRequires:  perl-interpreter
+BuildRequires:  perl-generators
+BuildRequires:  coreutils
+BuildRequires:  findutils
+BuildRequires:  make
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(List::Util)
 BuildRequires:  perl(Readonly)
@@ -20,6 +25,8 @@ Requires:       perl(Smart::Comments)
 Requires:       perl(Test::More)
 Requires:       perl(version)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+
+%{?perl_default_filter}
 
 %description
 This is a simple module that exports a single function - elide - which
