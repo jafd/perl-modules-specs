@@ -66,6 +66,7 @@ rm -rf %{buildroot}
 %doc Changes cpanfile LICENSE META.json minil.toml README.md
 %{perl_vendorarch}/auto/*
 %{perl_vendorarch}/Gazelle*
+%{perl_vendorlib}/Plack/Handler/Gazelle.pm
 %{_mandir}/man3/*
 
 %changelog
