@@ -22,7 +22,6 @@ BuildRequires:  perl(version)
 Requires:       perl(List::Util)
 Requires:       perl(Readonly)
 Requires:       perl(Smart::Comments)
-Requires:       perl(Test::More)
 Requires:       perl(version)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
