@@ -84,10 +84,10 @@ index 3181e4a..56815e9 100644
      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
      clean               => { FILES => 'Net-HTTPS-Any-*' },
 diff --git a/lib/Net/HTTPS/Any.pm b/lib/Net/HTTPS/Any.pm
-index 8224494..db93126 100644
+index 8224494..79c4994 100644
 --- a/lib/Net/HTTPS/Any.pm
 +++ b/lib/Net/HTTPS/Any.pm
-@@ -6,10 +6,24 @@ use base qw( Exporter );
+@@ -6,7 +6,9 @@ use base qw( Exporter );
  use vars qw( @EXPORT_OK );
  use URI::Escape;
  use Tie::IxHash;
@@ -98,22 +98,7 @@ index 8224494..db93126 100644
  
  @EXPORT_OK = qw( https_get https_post );
  
-+sub make_headers {
-+    my $result = HTTP::Headers->new();
-+    my %headers = @_;
-+    for my $k (keys %headers) {
-+        $result->header($k => $headers{$k});
-+    }
-+    return $result;
-+}
-+
-+sub make_form {
-+}
-+
- =head1 NAME
- 
- Net::HTTPS::Any - Simple HTTPS client
-@@ -128,19 +142,29 @@ sub https_get {
+@@ -128,19 +130,29 @@ sub https_get {
  
      my $headers = make_headers(%headers);
  
@@ -154,7 +139,7 @@ index 8224494..db93126 100644
  
      return ( $res_page, $res_code, @res_headers );
  
-@@ -216,24 +240,23 @@ sub https_post {
+@@ -216,29 +228,37 @@ sub https_post {
  
      my $headers = make_headers(%headers);
  
@@ -193,6 +178,20 @@ index 8224494..db93126 100644
  
      return ( $res_page, $res_code, @res_headers );
  
+ }
+ 
++=head2 make_headers %ARGUMENTS
++
++Makes an HTTP::Headers instance from a hash.
++
++=cut
++sub make_headers {
++    return HTTP::Headers->new(@_);
++}
++
+ =head1 AUTHOR
+ 
+ Ivan Kohler, C<< <ivan-net-https-any at freeside.biz> >>
 diff --git a/t/get-netssleay.t b/t/get-netssleay.t
 index 9ca788f..d108a85 100644
 --- a/t/get-netssleay.t
