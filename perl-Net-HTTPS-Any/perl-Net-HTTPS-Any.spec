@@ -1,6 +1,6 @@
 Name:           perl-Net-HTTPS-Any
 Version:        0.12
-Release:        99%{?dist}
+Release:        100%{?dist}
 Summary:        Simple HTTPS client
 License:        CHECK(Distributable)
 Group:          Development/Libraries
@@ -74,6 +74,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Tue Jan 31 2023 yaroslav@fedevych.name 0.12-100
+- Pass Content-Length to POST requests
+
 * Tue Jan 31 2023 yaroslav@fedevych.name 0.12.99-1
 - Forked to use LWP so that the tests pass and all modern servers
   can be talked to.

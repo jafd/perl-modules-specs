@@ -84,7 +84,7 @@ index 3181e4a..56815e9 100644
      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
      clean               => { FILES => 'Net-HTTPS-Any-*' },
 diff --git a/lib/Net/HTTPS/Any.pm b/lib/Net/HTTPS/Any.pm
-index 8224494..79c4994 100644
+index 8224494..f2062a0 100644
 --- a/lib/Net/HTTPS/Any.pm
 +++ b/lib/Net/HTTPS/Any.pm
 @@ -6,7 +6,9 @@ use base qw( Exporter );
@@ -139,25 +139,37 @@ index 8224494..79c4994 100644
  
      return ( $res_page, $res_code, @res_headers );
  
-@@ -216,29 +228,37 @@ sub https_post {
+@@ -214,29 +226,40 @@ sub https_post {
+     }
+     $headers{'Host'} ||= $opts->{'host'};
  
-     my $headers = make_headers(%headers);
- 
--    $Net::SSLeay::trace = $opts->{'debug'}
--      if exists $opts->{'debug'} && $opts->{'debug'};
--
--    my $raw_data = ref($post_data) ? make_form(%$post_data) : $post_data;
++
 +    my $raw_data;
 +    if (ref($post_data)) {
 +        my $u = URI->new("https://example.com");
 +        $u->query_form($post_data);
 +        $raw_data = $u->query;
 +    }
++    my $size;
++    do { use bytes; $size = length($raw_data); }
++    $headers{'Content-Length'} ||= $size;
+     my $headers = make_headers(%headers);
  
 -    $Net::SSLeay::trace = $opts->{'debug'}
 -      if exists $opts->{'debug'} && $opts->{'debug'};
 +    my $ua = LWP::UserAgent->new(default_headers => $headers);
 +    $ua->env_proxy;
+ 
+-    my $raw_data = ref($post_data) ? make_form(%$post_data) : $post_data;
++    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
++    my $request = HTTP::Request->new("POST", $url, $headers, $raw_data);
+ 
+-    $Net::SSLeay::trace = $opts->{'debug'}
+-      if exists $opts->{'debug'} && $opts->{'debug'};
++    my $response = $ua->request($request);
++    my $res_page = $response->content;
++    my $res_code = $response->code;
++    my @res_headers = $response->headers->flatten;
  
 -    my( $res_page, $res_code, @res_headers ) =
 -      post_https( $opts->{'host'},
@@ -167,31 +179,22 @@ index 8224494..79c4994 100644
 -                  $raw_data,
 -                  $opts->{"Content-Type"},
 -                );
-+    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
-+    my $request = HTTP::Request->new("POST", $url, $headers, $raw_data);
++    return ( $res_page, $res_code, @res_headers );
  
 -    $res_code =~ /^(HTTP\S+ )?(.*)/ and $res_code = $2;
-+    my $response = $ua->request($request);
-+    my $res_page = $response->content;
-+    my $res_code = $response->code;
-+    my @res_headers = $response->headers->flatten;
++}
  
-     return ( $res_page, $res_code, @res_headers );
- 
- }
- 
+-    return ( $res_page, $res_code, @res_headers );
 +=head2 make_headers %ARGUMENTS
-+
+ 
 +Makes an HTTP::Headers instance from a hash.
 +
 +=cut
 +sub make_headers {
 +    return HTTP::Headers->new(@_);
-+}
-+
- =head1 AUTHOR
+ }
  
- Ivan Kohler, C<< <ivan-net-https-any at freeside.biz> >>
+ =head1 AUTHOR
 diff --git a/t/get-netssleay.t b/t/get-netssleay.t
 index 9ca788f..d108a85 100644
 --- a/t/get-netssleay.t
