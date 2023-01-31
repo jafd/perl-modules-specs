@@ -16,6 +16,7 @@ BuildRequires:  make
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Net::HTTPS::Any)
 BuildRequires:  perl(Tie::IxHash)
+BuildRequires:  perl(Test::More)
 Requires:       perl(Net::HTTPS::Any)
 Requires:       perl(Tie::IxHash)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
