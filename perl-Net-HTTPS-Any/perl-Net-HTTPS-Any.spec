@@ -14,6 +14,7 @@ BuildRequires:  perl-generators
 BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  make
+
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Tie::IxHash)
@@ -21,6 +22,12 @@ BuildRequires:  perl(URI::Escape)
 BuildRequires:  perl(Test::Pod) >= 1.22
 BuildRequires:  perl(Test::Pod::Coverage) >= 1.08
 BuildRequires:  perl(Test::More)
+BuildRequires:  perl(LWP::UserAgent)
+BuildRequires:  perl(LWP::Protocol::https)
+BuildRequires:  perl(HTTP::Headers)
+BuildRequires:  perl(HTTP::Request)
+BuildRequires:  perl(URI)
+
 Requires:       perl(LWP::UserAgent)
 Requires:       perl(LWP::Protocol::https)
 Requires:       perl(HTTP::Headers)
