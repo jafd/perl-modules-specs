@@ -4,11 +4,16 @@ Release:        99%{?dist}
 Summary:        Simple HTTPS client
 License:        CHECK(Distributable)
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Net-HTTPS-Any/
-Source0:        http://www.cpan.org/authors/id/I/IV/IVAN/Net-HTTPS-Any-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Net-HTTPS-Any/
+Source0:        https://www.cpan.org/authors/id/I/IV/IVAN/Net-HTTPS-Any-%{version}.tar.gz
 Patch0:         Net-HTTPS-Any-0.12.99.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+BuildRequires:  perl-interpreter
+BuildRequires:  perl-generators
+BuildRequires:  coreutils
+BuildRequires:  findutils
+BuildRequires:  make
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Tie::IxHash)
@@ -24,6 +29,8 @@ Requires:       perl(URI)
 Requires:       perl(Tie::IxHash)
 Requires:       perl(URI::Escape)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+
+%{?perl_default_filter}
 
 %description
 This is a wrapper around LWP providing a simple interface for the
