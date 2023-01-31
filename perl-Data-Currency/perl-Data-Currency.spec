@@ -1,11 +1,11 @@
 Name:           perl-Data-Currency
-Version:        0.0501
+Version:        0.04002
 Release:        1%{?dist}
 Summary:        VERSION
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            https://search.cpan.org/dist/Data-Currency/
-Source0:        https://www.cpan.org/authors/id/D/DI/DICHI/Data-Currency-%{version}.tar.gz
+Source0:        https://www.cpan.org/authors/id/C/CL/CLACO/Data-Currency-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-interpreter >= 0:5.006001
@@ -13,6 +13,7 @@ BuildRequires:  perl-generators
 BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  make
+BuildRequires:  perl(Carp)
 BuildRequires:  perl(Class::Accessor::Grouped)
 BuildRequires:  perl(Class::Inspector)
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -25,6 +26,8 @@ BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Test::MockObject)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Test::Perl::Critic)
+BuildRequires:  perl(Module::Install)
+Requires:       perl(Carp)
 Requires:       perl(Class::Accessor::Grouped)
 Requires:       perl(Class::Inspector)
 Requires:       perl(Finance::Currency::Convert::WebserviceX)
@@ -64,12 +67,12 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc Changelog dist.ini LICENSE README README.mkdn TODO
+%doc Changes README TODO
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
 %changelog
-* Tue Jan 31 2023 yaroslav@fedevych.name 0.0501-1
+* Tue Jan 31 2023 yaroslav@fedevych.name 0.04002-1
 - Intentionally downgrade
 
 * Tue Jan 31 2023 yaroslav@fedevych.name 0.06000-1

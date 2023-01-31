@@ -84,7 +84,7 @@ index 3181e4a..56815e9 100644
      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
      clean               => { FILES => 'Net-HTTPS-Any-*' },
 diff --git a/lib/Net/HTTPS/Any.pm b/lib/Net/HTTPS/Any.pm
-index 8224494..13e40fc 100644
+index 8224494..28dcbd1 100644
 --- a/lib/Net/HTTPS/Any.pm
 +++ b/lib/Net/HTTPS/Any.pm
 @@ -6,7 +6,9 @@ use base qw( Exporter );
@@ -98,9 +98,20 @@ index 8224494..13e40fc 100644
  
  @EXPORT_OK = qw( https_get https_post );
  
-@@ -128,19 +130,29 @@ sub https_get {
+@@ -109,7 +111,7 @@ sub https_get {
+     }
  
-     my $headers = make_headers(%headers);
+     $opts->{'port'} ||= 443;
+-    #$opts->{"Content-Type"} ||= "application/x-www-form-urlencoded";
++    # $opts->{"Content-Type"} ||= "application/x-www-form-urlencoded";
+ 
+     ### XXX referer!!!
+     my %headers = ();
+@@ -126,21 +128,25 @@ sub https_get {
+               keys %$post_data );
+     }
+ 
+-    my $headers = make_headers(%headers);
  
 -    $Net::SSLeay::trace = $opts->{'debug'}
 -      if exists $opts->{'debug'} && $opts->{'debug'};
@@ -111,6 +122,7 @@ index 8224494..13e40fc 100644
 +        $raw_data = $u->query;
 +    }
 +
++    my $headers = make_headers(%headers);
 +    my $ua = LWP::UserAgent->new(default_headers => $headers);
 +    $ua->env_proxy;
  
@@ -122,14 +134,8 @@ index 8224494..13e40fc 100644
 -                 #"",
 -                 #$opts->{"Content-Type"},
 -               );
-+    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
-+    my $uri = URI->new($url);
-+    if (ref($post_data)) {
-+        $uri->query_form($post_data);
-+    } else {
-+        $uri->query($post_data);
-+    }
-+    my $request = HTTP::Request->new("GET", $uri->as_string, $headers);
++    my $url = "https://$opts->{host}:$opts->{port}$path";
++    my $request = HTTP::Request->new("GET", $url, $headers);
  
 -    $res_code =~ /^(HTTP\S+ )?(.*)/ and $res_code = $2;
 +    my $response = $ua->request($request);
@@ -139,7 +145,7 @@ index 8224494..13e40fc 100644
  
      return ( $res_page, $res_code, @res_headers );
  
-@@ -214,29 +226,40 @@ sub https_post {
+@@ -214,29 +220,42 @@ sub https_post {
      }
      $headers{'Host'} ||= $opts->{'host'};
  
@@ -149,19 +155,21 @@ index 8224494..13e40fc 100644
 +        my $u = URI->new("https://example.com");
 +        $u->query_form($post_data);
 +        $raw_data = $u->query;
++    } else {
++        $raw_data = $post_data;
 +    }
 +    my $size;
 +    do { use bytes; $size = length($raw_data); };
-+    $headers{'Content-Length'} ||= $size;
++    $headers{'Content-Length'} = $size;
      my $headers = make_headers(%headers);
  
 -    $Net::SSLeay::trace = $opts->{'debug'}
 -      if exists $opts->{'debug'} && $opts->{'debug'};
-+    my $ua = LWP::UserAgent->new(default_headers => $headers);
++    my $ua = LWP::UserAgent->new();
 +    $ua->env_proxy;
  
 -    my $raw_data = ref($post_data) ? make_form(%$post_data) : $post_data;
-+    my $url = "https://$opts->{host}:$opts->{port}/$opts->{path}";
++    my $url = "https://$opts->{host}:$opts->{port}$opts->{path}";
 +    my $request = HTTP::Request->new("POST", $url, $headers, $raw_data);
  
 -    $Net::SSLeay::trace = $opts->{'debug'}
@@ -196,10 +204,10 @@ index 8224494..13e40fc 100644
  
  =head1 AUTHOR
 diff --git a/t/get-netssleay.t b/t/get-netssleay.t
-index 9ca788f..d108a85 100644
+index 9ca788f..794f7b4 100644
 --- a/t/get-netssleay.t
 +++ b/t/get-netssleay.t
-@@ -12,9 +12,10 @@ BEGIN {
+@@ -12,14 +12,16 @@ BEGIN {
  #200
  
  my($content, $response, %headers) = https_get(
@@ -212,7 +220,13 @@ index 9ca788f..d108a85 100644
    },
    'net_https_any_test' => 1,
  );
-@@ -27,9 +28,10 @@ ok( length($content), 'Received content' );
+ 
+ #like($response, qr/^HTTP\/[\d\.]+\s+200/i, 'Received 200 (OK) response');
++diag($content);
+ like($response, qr/^200/i, 'Received 200 (OK) response');
+ 
+ ok( length($content), 'Received content' );
+@@ -27,13 +29,15 @@ ok( length($content), 'Received content' );
  #404
  
  my($content2, $response2, %headers2) = https_get(
@@ -225,11 +239,16 @@ index 9ca788f..d108a85 100644
    },
    'net_https_any_test' => 1,
  );
+ 
+ #like($response2, qr/^HTTP\/[\d\.]+\s+404/i, 'Received 404 (Not Found) response');
++diag($content2);
+ like($response2, qr/^404/i, 'Received 404 (Not Found) response');
+ 
 diff --git a/t/post-netssleay.t b/t/post-netssleay.t
-index 80c2863..0aff063 100644
+index 80c2863..a02526c 100644
 --- a/t/post-netssleay.t
 +++ b/t/post-netssleay.t
-@@ -11,10 +11,11 @@ BEGIN {
+@@ -11,15 +11,16 @@ BEGIN {
  
  #200
  my($content, $response, %headers) = https_post(
@@ -239,11 +258,16 @@ index 80c2863..0aff063 100644
 -    'path' => '/ServiceLogin',
 +    'path' => '/post',
      'args' => { 'posted' => 'data' },
-+    debug => 2,
    },
    'net_https_any_test' => 1,
  );
-@@ -27,10 +28,11 @@ ok( length($content), 'Received content' );
+ 
+ #like($response, qr/^HTTP\/[\d\.]+\s+200/i, 'Received 200 (OK) response');
++diag($content);
+ like($response, qr/^200/i, 'Received 200 (OK) response');
+ 
+ ok( length($content), 'Received content' );
+@@ -27,14 +28,15 @@ ok( length($content), 'Received content' );
  #404
  
  my($content2, $response2, %headers2) = https_post(
@@ -253,7 +277,11 @@ index 80c2863..0aff063 100644
 -    'path' => '/notfound.html',
 +    'path' => '/status/404',
      'args' => { 'length' => 'required' },
-+    debug => 3,
    },
    'net_https_any_test' => 1,
  );
+ 
+ #like($response2, qr/^HTTP\/[\d\.]+\s+404/i, 'Received 404 (Not Found) response');
++diag($response2);
+ like($response2, qr/^404/i, 'Received 404 (Not Found) response');
+ 
