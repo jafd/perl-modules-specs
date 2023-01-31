@@ -16,6 +16,7 @@ BuildRequires:  findutils
 BuildRequires:  perl(CGI::Application) >= 4.06
 BuildRequires:  perl(Devel::Declare) >= 0.003001
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(Test::More)
 Requires:       perl(CGI::Application) >= 4.06
 Requires:       perl(Devel::Declare) >= 0.003001
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
