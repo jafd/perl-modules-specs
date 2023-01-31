@@ -40,6 +40,8 @@ Requires:       perl(Try::Tiny)
 Requires:       perl(warnings)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
+%{?perl_default_filter}
+
 %description
 Data::Verifier allows you verify data (such as web forms, which was the
 original idea) by leveraging the power of Moose's type constraint system.
