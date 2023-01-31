@@ -1,6 +1,6 @@
 Name:           perl-Net-HTTPS-Any
-Version:        0.12.99
-Release:        1%{?dist}
+Version:        0.12
+Release:        99%{?dist}
 Summary:        Simple HTTPS client
 License:        CHECK(Distributable)
 Group:          Development/Libraries
