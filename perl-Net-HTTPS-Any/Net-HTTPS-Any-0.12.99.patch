@@ -84,7 +84,7 @@ index 3181e4a..56815e9 100644
      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
      clean               => { FILES => 'Net-HTTPS-Any-*' },
 diff --git a/lib/Net/HTTPS/Any.pm b/lib/Net/HTTPS/Any.pm
-index 8224494..f2062a0 100644
+index 8224494..13e40fc 100644
 --- a/lib/Net/HTTPS/Any.pm
 +++ b/lib/Net/HTTPS/Any.pm
 @@ -6,7 +6,9 @@ use base qw( Exporter );
@@ -151,7 +151,7 @@ index 8224494..f2062a0 100644
 +        $raw_data = $u->query;
 +    }
 +    my $size;
-+    do { use bytes; $size = length($raw_data); }
++    do { use bytes; $size = length($raw_data); };
 +    $headers{'Content-Length'} ||= $size;
      my $headers = make_headers(%headers);
  
