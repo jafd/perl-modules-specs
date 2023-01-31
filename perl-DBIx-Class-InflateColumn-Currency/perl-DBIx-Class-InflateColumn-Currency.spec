@@ -18,6 +18,7 @@ BuildRequires:  perl(Data::Currency) >= 0.03
 BuildRequires:  perl(DBD::SQLite) >= 1.11
 BuildRequires:  perl(DBIx::Class) >= 0.07005
 BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(Module::Install)
 Requires:       perl(Data::Currency) >= 0.03
 Requires:       perl(DBIx::Class) >= 0.07005
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
