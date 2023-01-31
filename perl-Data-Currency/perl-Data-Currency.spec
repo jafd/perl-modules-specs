@@ -64,7 +64,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc Changes dist.ini LICENSE README README.md README.mkdn TODO
+%doc Changelog dist.ini LICENSE README README.mkdn TODO
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
