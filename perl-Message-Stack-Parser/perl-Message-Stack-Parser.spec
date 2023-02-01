@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Simple role for creating a Message::Stack from things
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Message-Stack-Parser/
-Source0:        http://www.cpan.org/authors/id/G/GP/GPHAT/Message-Stack-Parser-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Message-Stack-Parser/
+Source0:        https://www.cpan.org/authors/id/G/GP/GPHAT/Message-Stack-Parser-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-interpreter
