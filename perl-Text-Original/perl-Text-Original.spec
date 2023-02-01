@@ -13,6 +13,8 @@ BuildRequires:  perl-generators
 BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  make
+BuildRequires:  perl(Test::More)
+BuildRequires:  perl(Memoize)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
