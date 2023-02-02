@@ -1,0 +1,15 @@
+diff --git a/lib/Finance/OFX/Parse.pm b/lib/Finance/OFX/Parse.pm
+index eb13ed4..46f19fc 100644
+--- a/lib/Finance/OFX/Parse.pm
++++ b/lib/Finance/OFX/Parse.pm
+@@ -122,8 +122,8 @@ sub parse_file
+ {
+     my $file = shift;
+     return undef unless $file;
+-#    my $text = do { local(@ARGV, $/) = $file; <> };
+-    my $text = read_file($file);
++    my $text = do { local(@ARGV, $/) = $file; <> };
++    # my $text = read_file($file);
+     return undef unless $text;
+     return parse($text);
+ }
