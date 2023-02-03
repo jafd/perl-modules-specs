@@ -26,7 +26,7 @@ BuildRequires:  perl(Test::Builder::Module)
 BuildRequires:  perl(Sys::Hostname)
 Requires:       perl(Carp)
 Requires:       perl(Exporter)
-Requires:       perl(Sys::Hostname);
+Requires:       perl(Sys::Hostname)
 Requires:       perl(IO::Socket::IP) >= 0.19
 Requires:       perl(Log::Syslog::Constants) >= 1.01
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
