@@ -1,6 +1,6 @@
 Name:           perl-DBIx-Class-Schema-PopulateMore
 Version:        0.19
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Enhanced populate method
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -40,7 +40,7 @@ Requires:       perl(Scalar::Util) >= 1.35
 Requires:       perl(Type::Tiny) >= 0.042
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
-%global __requires_exclude ^perl\\(DBIx::CLass::Schema::PopulateMore::
+%global __requires_exclude ^perl\\(DBIx::Class::Schema::PopulateMore::
 %{?perl_default_filter}
 
 %description
