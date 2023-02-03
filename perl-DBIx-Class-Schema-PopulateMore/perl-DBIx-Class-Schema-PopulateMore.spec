@@ -83,6 +83,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Fri Feb 03 2023 yaroslav@fedevych.name 0.19-3
+- Fixed a typo in requirements filter
+
 * Fri Feb 03 2023 yaroslav@fedevych.name 0.19-2
 - Fixed requirements
 
