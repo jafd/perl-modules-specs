@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Modify HTTP response headers
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Plack-Middleware-Header/
-Source0:        http://www.cpan.org/authors/id/C/CH/CHIBA/Plack-Middleware-Header-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Plack-Middleware-Header/
+Source0:        https://www.cpan.org/authors/id/C/CH/CHIBA/Plack-Middleware-Header-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl >= 1:5.8.1
