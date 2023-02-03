@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Tool for routing paths
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/Path-Router/
-Source0:        http://www.cpan.org/authors/id/N/NE/NEILB/Path-Router-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/Path-Router/
+Source0:        https://www.cpan.org/authors/id/N/NE/NEILB/Path-Router-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl >= 0:5.008
