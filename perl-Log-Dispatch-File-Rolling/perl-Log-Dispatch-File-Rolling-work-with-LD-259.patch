@@ -1,0 +1,119 @@
+From f5ff541806ee2f0c5d6c8623ac6a591a79556342 Mon Sep 17 00:00:00 2001
+From: Michael Schout <mschout@gkg.net>
+Date: Mon, 14 Aug 2017 13:09:27 -0500
+Subject: [PATCH] Update to work with Log::Dispatch v2.59 and later
+
+See https://rt.cpan.org/Ticket/Display.html?id=120378
+---
+ META.json                        |  2 +-
+ META.yml                         |  2 +-
+ Makefile.PL                      |  2 +-
+ lib/Log/Dispatch/File/Rolling.pm | 26 ++++++++++----------------
+ 4 files changed, 13 insertions(+), 19 deletions(-)
+
+diff --git a/META.json b/META.json
+index c17c800..194ee13 100644
+--- a/META.json
++++ b/META.json
+@@ -32,7 +32,7 @@
+       },
+       "runtime" : {
+          "requires" : {
+-            "Log::Dispatch" : "2.37",
++            "Log::Dispatch" : "2.59",
+             "Log::Log4perl" : "0.32"
+          }
+       }
+diff --git a/META.yml b/META.yml
+index dd9b950..da355e1 100644
+--- a/META.yml
++++ b/META.yml
+@@ -18,6 +18,6 @@ no_index:
+     - t
+     - inc
+ requires:
+-  Log::Dispatch: 2.37
++  Log::Dispatch: 2.59
+   Log::Log4perl: 0.32
+ version: 1.09
+diff --git a/Makefile.PL b/Makefile.PL
+index add5084..c3bfaeb 100755
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -7,7 +7,7 @@ WriteMakefile(
+ 	'VERSION_FROM'  => 'lib/Log/Dispatch/File/Rolling.pm', # finds $VERSION
+ 	'PREREQ_PM'     => {
+ 		'Log::Log4perl' => '0.32',
+-		'Log::Dispatch' => '2.37',
++		'Log::Dispatch' => '2.59',
+ #		'Pod::Readme'   => '0.05', # only needed for 'make dist'
+ 	},
+ 	($] >= 5.005 ? (   ## Add these new keywords supported since 5.005
+diff --git a/lib/Log/Dispatch/File/Rolling.pm b/lib/Log/Dispatch/File/Rolling.pm
+index 2928c1e..3e5fbbc 100755
+--- a/lib/Log/Dispatch/File/Rolling.pm
++++ b/lib/Log/Dispatch/File/Rolling.pm
+@@ -5,7 +5,7 @@ use 5.006001;
+ use strict;
+ use warnings;
+ 
+-use Log::Dispatch::File '2.37';
++use Log::Dispatch::File '2.59';
+ use Log::Log4perl::DateFormat;
+ use Fcntl ':flock'; # import LOCK_* constants
+ 
+@@ -30,42 +30,36 @@ BEGIN { # borrowed from Log::Log4perl::Layout::PatternLayout, Thanks!
+ 
+ # Preloaded methods go here.
+ 
+-sub new {
+-	my $proto = shift;
+-	my $class = ref $proto || $proto;
++sub _basic_init {
++	my $self = shift;
+ 
+ 	my %p = @_;
+ 
+-	my $self = bless {}, $class;
+-
+ 	# only append mode is supported
+-	$p{mode} = 'append';
++	$self->{mode} = '>>';
+ 
+-	# base class initialization
+-	$self->_basic_init(%p);
++	$self->{rolling_fh_pid} = $$;
+ 
+ 	# split pathname into path, basename, extension
+-	if ($p{filename} =~ /^(.*)\%d\{([^\}]*)\}(.*)$/) {
++	if ($self->{filename} =~ /^(.*)\%d\{([^\}]*)\}(.*)$/) {
+ 		$self->{rolling_filename_prefix}  = $1;
+ 		$self->{rolling_filename_postfix} = $3;
+ 		$self->{rolling_filename_format}  = Log::Log4perl::DateFormat->new($2);
+ 		$self->{filename} = $self->_createFilename();
+-	} elsif ($p{filename} =~ /^(.*)(\.[^\.]+)$/) {
++	} elsif ($self->{filename} =~ /^(.*)(\.[^\.]+)$/) {
+ 		$self->{rolling_filename_prefix}  = $1;
+ 		$self->{rolling_filename_postfix} = $2;
+ 		$self->{rolling_filename_format}  = Log::Log4perl::DateFormat->new('-yyyy-MM-dd');
+ 		$self->{filename} = $self->_createFilename();
+ 	} else {
+-		$self->{rolling_filename_prefix}  = $p{filename};
++		$self->{rolling_filename_prefix}  = $self->{filename};
+ 		$self->{rolling_filename_postfix} = '';
+ 		$self->{rolling_filename_format}  = Log::Log4perl::DateFormat->new('.yyyy-MM-dd');
+ 		$self->{filename} = $self->_createFilename();
+ 	}
+ 
+-	$self->{rolling_fh_pid} = $$;
+-	$self->_make_handle();
+-
+-	return $self;
++	# base class initialization
++	$self->SUPER::_basic_init(%p);
+ }
+ 
+ sub log_message { # parts borrowed from Log::Dispatch::FileRotate, Thanks!
+-- 
+2.12.2
+
