@@ -6,6 +6,7 @@ License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            https://search.cpan.org/dist/HTML-Scrubber-StripScripts/
 Source0:        https://www.cpan.org/authors/id/N/NC/NCLEATON/HTML-Scrubber-StripScripts-%{version}.tar.gz
+Patch0:         perl-HTML-Scrubber-StripScripts-test-fixes.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-interpreter
@@ -30,6 +31,7 @@ introducing XSS (cross site scripting) vulnerabilities.
 
 %prep
 %setup -q -n HTML-Scrubber-StripScripts-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor

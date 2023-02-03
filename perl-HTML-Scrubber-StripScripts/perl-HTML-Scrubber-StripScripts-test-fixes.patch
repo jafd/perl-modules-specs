@@ -1,0 +1,72 @@
+diff --git a/t/10default.t b/t/10default.t
+index cc548e7..d641e29 100644
+--- a/t/10default.t
++++ b/t/10default.t
+@@ -65,6 +65,7 @@ my $alltags = <<END;
+ END
+ test( $alltags, $alltags, 'open all permitted tags' );
+ 
++$alltags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $alltags =~ s#<#</#g;
+ test( $alltags, $alltags, 'close all permitted tags' );
+ 
+diff --git a/t/20href.t b/t/20href.t
+index ac884e2..7a36a62 100644
+--- a/t/20href.t
++++ b/t/20href.t
+@@ -66,6 +66,7 @@ my $alltags = <<END;
+ END
+ test( $alltags, $alltags, 'open all permitted tags' );
+ 
++$alltags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $alltags =~ s#<#</#g;
+ test( $alltags, $alltags, 'close all permitted tags' );
+ 
+diff --git a/t/30src.t b/t/30src.t
+index a195249..fd8c951 100644
+--- a/t/30src.t
++++ b/t/30src.t
+@@ -68,6 +68,7 @@ my $alltags = <<END;
+ END
+ test( $alltags, $alltags, 'open all permitted tags' );
+ 
++$alltags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $alltags =~ s#<#</#g;
+ test( $alltags, $alltags, 'close all permitted tags' );
+ 
+diff --git a/t/40mailto.t b/t/40mailto.t
+index 981fc64..3788682 100644
+--- a/t/40mailto.t
++++ b/t/40mailto.t
+@@ -66,6 +66,7 @@ my $alltags = <<END;
+ END
+ test( $alltags, $alltags, 'open all permitted tags' );
+ 
++$alltags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $alltags =~ s#<#</#g;
+ test( $alltags, $alltags, 'close all permitted tags' );
+ 
+diff --git a/t/50whole.t b/t/50whole.t
+index 5f3fb13..e90fa62 100644
+--- a/t/50whole.t
++++ b/t/50whole.t
+@@ -69,6 +69,7 @@ my $alltags = <<END;
+ END
+ test( $alltags, $alltags, 'open all permitted tags' );
+ 
++$alltags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $alltags =~ s#<#</#g;
+ test( $alltags, $alltags, 'close all permitted tags' );
+ 
+diff --git a/t/60block.t b/t/60block.t
+index bcaba3d..8c2bc5d 100644
+--- a/t/60block.t
++++ b/t/60block.t
+@@ -79,6 +79,7 @@ $passtags =~ s/<hr>|<table>|<title>//g;
+ test( $alltags, $passtags, 'open all permitted tags' );
+ 
+ $alltags =~ s#<#</#g;
++$passtags =~ s/<(?:br|col|hr|img)>//g; # There are no closing tags for these
+ $passtags =~ s#<#</#g;
+ test( $alltags, $passtags, 'close all permitted tags' );
+ 
