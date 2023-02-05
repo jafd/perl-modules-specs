@@ -20,6 +20,7 @@ Requires:  perl(DBI) >= 1.13, perl(DBD::mysql) >= 1.0, perl(Time::HiRes), perl(I
 Requires:  perl-English perl-sigtrap perl-Sys-Hostname perl-FindBin
 %endif
 AutoReq:   no
+BuildArch: noarch
 
 %description
 Percona Toolkit is a collection of advanced command-line tools used by
