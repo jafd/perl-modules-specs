@@ -11,6 +11,8 @@ BuildArch:      noarch
 BuildRequires:  make
 BuildRequires:  coreutils
 BuildRequires:  findutils
+BuildRequires:  perl-generators
+BuildRequires:  perl-interpreter
 BuildRequires:  perl(CGI) >= 4.21
 BuildRequires:  perl(CGI::Application) >= 4.06
 BuildRequires:  perl(ExtUtils::MakeMaker)
@@ -41,8 +43,8 @@ rm -rf %{buildroot}
 
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
 
-# find %{buildroot} -type f -name .packlist -exec rm -f {} \;
-# find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
+find %{buildroot} -type f -name .packlist -exec rm -f {} \;
+find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
 
 %{_fixperms} %{buildroot}/*
 
