@@ -18,10 +18,12 @@ BuildRequires:  perl(File::Spec)
 BuildRequires:  perl(Parse::Keyword) >= 0.09
 BuildRequires:  perl(Sub::Name) >= 0.26
 BuildRequires:  perl(Test::More)
+BuildRequires:  perl(Attribute::Handlers)
 Requires:       perl(CGI) >= 4.21
 Requires:       perl(CGI::Application) >= 4.06
 Requires:       perl(Parse::Keyword) >= 0.09
 Requires:       perl(Sub::Name) >= 0.26
+Requires:       perl(Attribute::Handlers)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
