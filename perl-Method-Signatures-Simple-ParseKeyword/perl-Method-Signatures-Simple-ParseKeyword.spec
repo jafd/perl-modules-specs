@@ -8,6 +8,9 @@ URL:            https://search.cpan.org/dist/Method-Signatures-Simple-ParseKeywo
 Source0:        https://www.cpan.org/authors/id/R/RH/RHESA/Method-Signatures-Simple-ParseKeyword-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
+BuildRequires:  make
+BuildRequires:  coreutils
+BuildRequires:  findutils
 BuildRequires:  perl-interpreter
 BuildRequires:  perl-generators
 BuildRequires:  perl(ExtUtils::MakeMaker)
