@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Declare runmodes using Parse::Keyword
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/CGI-Application-Plugin-RunmodeParseKeyword/
-Source0:        http://www.cpan.org/authors/id/R/RH/RHESA/CGI-Application-Plugin-RunmodeParseKeyword-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/CGI-Application-Plugin-RunmodeParseKeyword/
+Source0:        https://www.cpan.org/authors/id/R/RH/RHESA/CGI-Application-Plugin-RunmodeParseKeyword-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  make

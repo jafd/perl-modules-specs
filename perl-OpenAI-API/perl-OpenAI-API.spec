@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        Perl interface to OpenAI API
 License:        Artistic 2.0
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/OpenAI-API/
-Source0:        http://www.cpan.org/authors/id/N/NF/NFERRAZ/OpenAI-API-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/OpenAI-API/
+Source0:        https://www.cpan.org/authors/id/N/NF/NFERRAZ/OpenAI-API-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  make
