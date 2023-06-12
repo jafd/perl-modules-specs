@@ -33,7 +33,7 @@ provides method signatures similar to Method::Signatures::Simple.
 %setup -q -n CGI-Application-Plugin-RunmodeParseKeyword-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor NO_PACKLIST=1
 make %{?_smp_mflags}
 
 %install
@@ -41,8 +41,8 @@ rm -rf %{buildroot}
 
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
 
-find %{buildroot} -type f -name .packlist -exec rm -f {} \;
-find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
+# find %{buildroot} -type f -name .packlist -exec rm -f {} \;
+# find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
 
 %{_fixperms} %{buildroot}/*
 
