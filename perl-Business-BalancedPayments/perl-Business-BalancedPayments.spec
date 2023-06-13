@@ -30,6 +30,7 @@ BuildRequires:  perl(Test::Modern)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(warnings)
 BuildRequires:  perl(WebService::Client) >= 0.0001
+BuildRequires:  perl(blib)
 Requires:       perl(Carp)
 Requires:       perl(HTTP::Request::Common)
 Requires:       perl(JSON)
