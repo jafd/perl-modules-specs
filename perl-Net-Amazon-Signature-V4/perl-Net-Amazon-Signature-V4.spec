@@ -24,6 +24,7 @@ BuildRequires:  perl(sort)
 Requires:       perl(Digest::SHA)
 Requires:       perl(Time::Piece) >= 1.17
 Requires:       perl(URI::Escape)
+Requires:       perl(sort)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
