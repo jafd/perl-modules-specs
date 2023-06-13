@@ -48,6 +48,8 @@ BuildRequires:  perl(URL::Encode)
 BuildRequires:  perl(URL::Encode::XS)
 BuildRequires:  perl(XML::Simple) >= 2.21
 BuildRequires:  perl(YAML)
+BuildRequires:  perl(Time::HiRes)
+Requires:       perl(Time::HiRes)
 Requires:       perl(ARGV::Struct)
 Requires:       perl(Browser::Open)
 Requires:       perl(Config::AWS)
