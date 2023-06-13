@@ -9,7 +9,10 @@ Source0:        https://www.cpan.org/authors/id/J/JL/JLMARTIN/Paws-%{version}.ta
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-generators
-BuildRequires:  perl-interpreter >= 0:5.010001
+BuildRequires:  perl-interpreter
+BuildRequires:  make
+BuildRequires:  findutils
+BuildRequires:  coreutils
 BuildRequires:  perl(ARGV::Struct)
 BuildRequires:  perl(Browser::Open)
 BuildRequires:  perl(Class::Unload)

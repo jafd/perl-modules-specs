@@ -12,7 +12,7 @@ BuildRequires:  make
 BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  perl-generators
-BuildRequires:  perl-interpreter >= 0:5.006
+BuildRequires:  perl-interpreter
 BuildRequires:  perl(Carp)
 BuildRequires:  perl(Exporter)
 BuildRequires:  perl(ExtUtils::MakeMaker)
