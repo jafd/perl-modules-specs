@@ -18,10 +18,12 @@ BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Unicode::Normalize)
 BuildRequires:  perl(URI)
 BuildRequires:  perl(URI::Escape)
+BuildRequires:  perl(FindBin)
 Requires:       perl(Unicode::Normalize)
 Requires:       perl(URI)
 Requires:       perl(URI::Escape)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+Requires:       perl(FindBin)
 
 %description
 This module provides a wrapper around URI templates as described in RFC
