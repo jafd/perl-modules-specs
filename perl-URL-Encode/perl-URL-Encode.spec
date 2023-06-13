@@ -31,10 +31,12 @@ the application/x-www-form-urlencoded encoding.
 %setup -q -n URL-Encode-%{version}
 
 %build
+export PERL_USE_UNSAFE_INC=1
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 make %{?_smp_mflags}
 
 %install
+export PERL_USE_UNSAFE_INC=1
 rm -rf %{buildroot}
 
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
@@ -45,6 +47,7 @@ find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
 %{_fixperms} %{buildroot}/*
 
 %check
+export PERL_USE_UNSAFE_INC=1
 make test
 
 %clean
