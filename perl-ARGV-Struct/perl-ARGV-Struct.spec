@@ -53,6 +53,7 @@ rm -rf %{buildroot}
 %doc Changes cpanfile dist.ini LICENSE Makefile META.json README.md
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+%{_bindir}/argvstruct
 
 %changelog
 * Tue Jun 13 2023 Yaroslav Fedevych <yaroslav@fedevych.name> 0.06-1
