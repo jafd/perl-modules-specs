@@ -18,9 +18,11 @@ BuildRequires:  perl(Exporter)
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Test::More) >= 0.88
 BuildRequires:  perl(XSLoader)
+BuildRequires:  perl(FindBin)
 Requires:       perl(Carp)
 Requires:       perl(Exporter)
 Requires:       perl(XSLoader)
+Requires:       perl(FindBin)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
