@@ -20,6 +20,7 @@ BuildRequires:  perl(HTTP::Request)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Time::Piece) >= 1.17
 BuildRequires:  perl(URI::Escape)
+BuildRequires:  perl(sort)
 Requires:       perl(Digest::SHA)
 Requires:       perl(Time::Piece) >= 1.17
 Requires:       perl(URI::Escape)
