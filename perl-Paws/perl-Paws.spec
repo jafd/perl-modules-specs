@@ -108,6 +108,9 @@ rm -rf %{buildroot}
 %doc benchmarks Changes cpanfile dist.ini examples LICENSE META.json README.md script
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+%{_bindir}/open_aws_console
+%{_bindir}/paws
+%{_bindir}/paws_make_testcase
 
 %changelog
 * Tue Jun 13 2023 Yaroslav Fedevych <yaroslav@fedevych.name> 0.44-1
