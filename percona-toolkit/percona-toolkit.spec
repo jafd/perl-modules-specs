@@ -5,13 +5,13 @@
 
 Name:      percona-toolkit
 Summary:   Advanced MySQL and system command-line tools
-Version:   3.5.1
+Version:   3.5.3
 Release:   1%{dist}
 Group:     Applications/Databases
 License:   GPLv2
 Vendor:    Percona
 URL:       https://www.percona.com/software/percona-toolkit/
-Source:    https://downloads.percona.com/downloads/percona-toolkit/3.5.1/source/tarball/percona-toolkit-%{version}.tar.gz
+Source:    https://downloads.percona.com/downloads/percona-toolkit/%{version}/source/tarball/percona-toolkit-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: perl(ExtUtils::MakeMaker) make
