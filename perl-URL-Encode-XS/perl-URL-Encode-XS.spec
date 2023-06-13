@@ -9,6 +9,7 @@ Source0:        https://www.cpan.org/authors/id/C/CH/CHANSEN/URL-Encode-XS-%{ver
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  perl-generators
 BuildRequires:  perl-interpreter
+BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  findutils
 BuildRequires:  coreutils
