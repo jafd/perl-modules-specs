@@ -10,6 +10,8 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  perl-interpreter
 BuildRequires:  perl-generators
 BuildRequires:  make
+BuildRequires:  perl-devel
+BuildRequires:  gcc
 BuildRequires:  findutils
 BuildRequires:  coreutils
 BuildRequires:  perl(ExtUtils::MakeMaker)
