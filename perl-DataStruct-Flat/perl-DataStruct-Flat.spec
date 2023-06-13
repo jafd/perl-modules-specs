@@ -15,6 +15,7 @@ BuildRequires:  findutils
 BuildRequires:  coreutils
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Moo)
+BuildRequires:  perl(Test::More)
 Requires:       perl(Moo)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
