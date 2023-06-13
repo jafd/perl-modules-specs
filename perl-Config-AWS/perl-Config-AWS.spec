@@ -17,6 +17,7 @@ BuildRequires:  perl(Exporter::Tiny) >= 1
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(File::Spec)
 BuildRequires:  perl(Module::Build)
+BuildRequires:  perl(Module::Build::Tiny)
 BuildRequires:  perl(Path::Tiny) >= 0.076
 BuildRequires:  perl(Ref::Util)
 BuildRequires:  perl(Test2::Tools::Spec)
