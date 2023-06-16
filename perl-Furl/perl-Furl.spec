@@ -13,6 +13,10 @@ BuildRequires:  perl-generators
 BuildRequires:  findutils
 BuildRequires:  coreutils
 BuildRequires:  perl(Module::Build::Tiny)
+BuildRequires:  perl(FindBin)
+BuildRequires:  perl(Plack::Request)
+BuildRequires:  perl(HTTP::Request)
+BuildRequires:  perl(Test::Fake::HTTPD)
 BuildRequires:  perl(Class::Accessor::Lite)
 BuildRequires:  perl(Compress::Raw::Zlib)
 BuildRequires:  perl(Encode)
