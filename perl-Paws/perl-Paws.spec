@@ -1,6 +1,6 @@
 Name:           perl-Paws
 Version:        0.44
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Perl SDK for AWS (Amazon Web Services) APIs
 License:        Apache Software License
 Group:          Development/Libraries
@@ -49,6 +49,8 @@ BuildRequires:  perl(URL::Encode::XS)
 BuildRequires:  perl(XML::Simple) >= 2.21
 BuildRequires:  perl(YAML)
 BuildRequires:  perl(Time::HiRes)
+BuildRequires:  perl(Furl)
+BuildRequires:  perl(Future::Mojo)
 Requires:       perl(Time::HiRes)
 Requires:       perl(ARGV::Struct)
 Requires:       perl(Browser::Open)
@@ -72,11 +74,18 @@ Requires:       perl(Path::Tiny) >= 0.017
 Requires:       perl(String::CRC32)
 Requires:       perl(Throwable::Error)
 Requires:       perl(URI)
+Requires:       perl(Furl)
+Requires:       perl(Future::Mojo)
 Requires:       perl(URI::Template) >= 0.23
 Requires:       perl(URL::Encode)
 Requires:       perl(URL::Encode::XS)
 Requires:       perl(XML::Simple) >= 2.21
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
+
+%{?perl_default_filter}
+
+%global __requires_exclude ^perl\\(Paws::.+\\)$
+
 
 %description
 Paws is an attempt to develop an always up-to-date SDK that covers all
