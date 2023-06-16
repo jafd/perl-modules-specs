@@ -12,6 +12,7 @@ BuildRequires:  perl-interpreter
 BuildRequires:  perl-generators
 BuildRequires:  findutils
 BuildRequires:  coreutils
+BuildRequires:  perl(Module::Build::Tiny)
 BuildRequires:  perl(Class::Accessor::Lite)
 BuildRequires:  perl(Compress::Raw::Zlib)
 BuildRequires:  perl(Encode)
