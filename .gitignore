@@ -4,3 +4,6 @@
 *.xz
 *.zip
 *.tgz
+.repo/
+.srpms/
+.stamps/
