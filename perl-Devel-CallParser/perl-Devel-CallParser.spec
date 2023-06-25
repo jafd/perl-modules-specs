@@ -30,7 +30,7 @@ BuildRequires:  perl(IO::File) >= 1.03
 BuildRequires:  perl(Test::More)
 # Optional Tests
 #BuildRequires: perl(Data::Alias) >= 1.13          # Broken with systemtap-enabled perl, retired in Fedora since Fedora 25
-BuildRequires:  perl(Devel::Declare) >= 0.006004
+#BuildRequires:  perl(Devel::Declare) >= 0.006004
 BuildRequires:  perl(indirect) >= 0.27
 BuildRequires:  perl(Lexical::Sub) >= 0.004
 #BuildRequires: perl(Sub::StrictDecl) >= 0.001     # Not yet packaged
