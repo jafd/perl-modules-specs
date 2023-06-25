@@ -1,0 +1,21 @@
+diff --git a/t/basic.t b/t/basic.t
+index ba6d3ba..9d498e9 100644
+--- a/t/basic.t
++++ b/t/basic.t
+@@ -10,6 +10,7 @@ use FindBin;
+ use Path::Class;
+ use Storable qw(fd_retrieve);
+ use Perl::Command;
++use Data::Dumper;
+ 
+ my ( $perl, @lib ) = @PERL;
+ 
+@@ -40,6 +41,8 @@ require_ok("Log::Dispatch::Config::TestLog");
+ 
+ is( @log, 10, "10 log messages" );
+ 
++diag Dumper(\@log);
++
+ cmp_deeply(
+ 	\@log,
+ 	[
