@@ -1,0 +1,597 @@
+[submodule "perl-Algorithm-Loops"]
+	path = perl-Algorithm-Loops
+	url = https://src.fedoraproject.org/rpms/perl-Algorithm-Loops.git
+[submodule "perl-AnyEvent-AIO"]
+	path = perl-AnyEvent-AIO
+	url = https://src.fedoraproject.org/rpms/perl-AnyEvent-AIO.git
+[submodule "perl-AnyEvent-CacheDNS"]
+	path = perl-AnyEvent-CacheDNS
+	url = https://src.fedoraproject.org/rpms/perl-AnyEvent-CacheDNS.git
+[submodule "perl-App-Nopaste"]
+	path = perl-App-Nopaste
+	url = https://src.fedoraproject.org/rpms/perl-App-Nopaste.git
+[submodule "perl-Authen-DecHpwd"]
+	path = perl-Authen-DecHpwd
+	url = https://src.fedoraproject.org/rpms/perl-Authen-DecHpwd.git
+[submodule "perl-Authen-Passphrase"]
+	path = perl-Authen-Passphrase
+	url = https://src.fedoraproject.org/rpms/perl-Authen-Passphrase.git
+[submodule "perl-Beanstalk-Client"]
+	path = perl-Beanstalk-Client
+	url = https://src.fedoraproject.org/rpms/perl-Beanstalk-Client.git
+[submodule "perl-Business-PayPal-API"]
+	path = perl-Business-PayPal-API
+	url = https://src.fedoraproject.org/rpms/perl-Business-PayPal-API.git
+[submodule "perl-Bytes-Random-Secure"]
+	path = perl-Bytes-Random-Secure
+	url = https://src.fedoraproject.org/rpms/perl-Bytes-Random-Secure.git
+[submodule "perl-Carp-Always"]
+	path = perl-Carp-Always
+	url = https://src.fedoraproject.org/rpms/perl-Carp-Always.git
+[submodule "perl-Carp-Assert-More"]
+	path = perl-Carp-Assert-More
+	url = https://src.fedoraproject.org/rpms/perl-Carp-Assert-More.git
+[submodule "perl-Carp-Clan-Share"]
+	path = perl-Carp-Clan-Share
+	url = https://src.fedoraproject.org/rpms/perl-Carp-Clan-Share.git
+[submodule "perl-CGI-Application"]
+	path = perl-CGI-Application
+	url = https://src.fedoraproject.org/rpms/perl-CGI-Application.git
+[submodule "perl-CGI-Application-Dispatch"]
+	path = perl-CGI-Application-Dispatch
+	url = https://src.fedoraproject.org/rpms/perl-CGI-Application-Dispatch.git
+[submodule "perl-CGI-Application-Plugin-AutoRunmode"]
+	path = perl-CGI-Application-Plugin-AutoRunmode
+	url = https://src.fedoraproject.org/rpms/perl-CGI-Application-Plugin-AutoRunmode.git
+[submodule "perl-CGI-Application-Plugin-DBH"]
+	path = perl-CGI-Application-Plugin-DBH
+	url = https://src.fedoraproject.org/rpms/perl-CGI-Application-Plugin-DBH.git
+[submodule "perl-CGI-Application-Plugin-Redirect"]
+	path = perl-CGI-Application-Plugin-Redirect
+	url = https://src.fedoraproject.org/rpms/perl-CGI-Application-Plugin-Redirect.git
+[submodule "perl-CGI-PSGI"]
+	path = perl-CGI-PSGI
+	url = https://src.fedoraproject.org/rpms/perl-CGI-PSGI.git
+[submodule "perl-ClamAV-Client"]
+	path = perl-ClamAV-Client
+	url = https://src.fedoraproject.org/rpms/perl-ClamAV-Client.git
+[submodule "perl-Class-CSV"]
+	path = perl-Class-CSV
+	url = https://src.fedoraproject.org/rpms/perl-Class-CSV.git
+[submodule "perl-Class-ISA"]
+	path = perl-Class-ISA
+	url = https://src.fedoraproject.org/rpms/perl-Class-ISA.git
+[submodule "perl-Class-Prototyped"]
+	path = perl-Class-Prototyped
+	url = https://src.fedoraproject.org/rpms/perl-Class-Prototyped.git
+[submodule "perl-Class-Refresh"]
+	path = perl-Class-Refresh
+	url = https://src.fedoraproject.org/rpms/perl-Class-Refresh.git
+[submodule "perl-Class-ReturnValue"]
+	path = perl-Class-ReturnValue
+	url = https://src.fedoraproject.org/rpms/perl-Class-ReturnValue.git
+[submodule "perl-Clipboard"]
+	path = perl-Clipboard
+	url = https://src.fedoraproject.org/rpms/perl-Clipboard.git
+[submodule "perl-Config-JFDI"]
+	path = perl-Config-JFDI
+	url = https://src.fedoraproject.org/rpms/perl-Config-JFDI.git
+[submodule "perl-Config-ZOMG"]
+	path = perl-Config-ZOMG
+	url = https://src.fedoraproject.org/rpms/perl-Config-ZOMG.git
+[submodule "perl-Coro"]
+	path = perl-Coro
+	url = https://src.fedoraproject.org/rpms/perl-Coro.git
+[submodule "perl-Crypt-MySQL"]
+	path = perl-Crypt-MySQL
+	url = https://src.fedoraproject.org/rpms/perl-Crypt-MySQL.git
+[submodule "perl-Crypt-OpenSSL-DSA"]
+	path = perl-Crypt-OpenSSL-DSA
+	url = https://src.fedoraproject.org/rpms/perl-Crypt-OpenSSL-DSA.git
+[submodule "perl-Crypt-OpenSSL-Guess"]
+	path = perl-Crypt-OpenSSL-Guess
+	url = https://src.fedoraproject.org/rpms/perl-Crypt-OpenSSL-Guess.git
+[submodule "perl-Crypt-Random-Seed"]
+	path = perl-Crypt-Random-Seed
+	url = https://src.fedoraproject.org/rpms/perl-Crypt-Random-Seed.git
+[submodule "perl-Crypt-UnixCrypt_XS"]
+	path = perl-Crypt-UnixCrypt_XS
+	url = https://src.fedoraproject.org/rpms/perl-Crypt-UnixCrypt_XS.git
+[submodule "perl-curry"]
+	path = perl-curry
+	url = https://src.fedoraproject.org/rpms/perl-curry.git
+[submodule "perl-Data-Constraint"]
+	path = perl-Data-Constraint
+	url = https://src.fedoraproject.org/rpms/perl-Data-Constraint.git
+[submodule "perl-Data-ICal"]
+	path = perl-Data-ICal
+	url = https://src.fedoraproject.org/rpms/perl-Data-ICal.git
+[submodule "perl-Data-ICal-DateTime"]
+	path = perl-Data-ICal-DateTime
+	url = https://src.fedoraproject.org/rpms/perl-Data-ICal-DateTime.git
+[submodule "perl-Data-Integer"]
+	path = perl-Data-Integer
+	url = https://src.fedoraproject.org/rpms/perl-Data-Integer.git
+[submodule "perl-Data-MessagePack"]
+	path = perl-Data-MessagePack
+	url = https://src.fedoraproject.org/rpms/perl-Data-MessagePack.git
+[submodule "perl-Data-Page"]
+	path = perl-Data-Page
+	url = https://src.fedoraproject.org/rpms/perl-Data-Page.git
+[submodule "perl-Data-Random"]
+	path = perl-Data-Random
+	url = https://src.fedoraproject.org/rpms/perl-Data-Random.git
+[submodule "perl-Data-Stream-Bulk"]
+	path = perl-Data-Stream-Bulk
+	url = https://src.fedoraproject.org/rpms/perl-Data-Stream-Bulk.git
+[submodule "perl-Data-Validate-Type"]
+	path = perl-Data-Validate-Type
+	url = https://src.fedoraproject.org/rpms/perl-Data-Validate-Type.git
+[submodule "perl-Data-Visitor"]
+	path = perl-Data-Visitor
+	url = https://src.fedoraproject.org/rpms/perl-Data-Visitor.git
+[submodule "perl-DateTime-Event-ICal"]
+	path = perl-DateTime-Event-ICal
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Event-ICal.git
+[submodule "perl-DateTime-Event-Recurrence"]
+	path = perl-DateTime-Event-Recurrence
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Event-Recurrence.git
+[submodule "perl-DateTime-Format-DateManip"]
+	path = perl-DateTime-Format-DateManip
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-DateManip.git
+[submodule "perl-DateTime-Format-Flexible"]
+	path = perl-DateTime-Format-Flexible
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-Flexible.git
+[submodule "perl-DateTime-Format-HTTP"]
+	path = perl-DateTime-Format-HTTP
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-HTTP.git
+[submodule "perl-DateTime-Format-ICal"]
+	path = perl-DateTime-Format-ICal
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-ICal.git
+[submodule "perl-DateTime-Format-Natural"]
+	path = perl-DateTime-Format-Natural
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-Natural.git
+[submodule "perl-DateTime-HiRes"]
+	path = perl-DateTime-HiRes
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-HiRes.git
+[submodule "perl-DateTime-Set"]
+	path = perl-DateTime-Set
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-Set.git
+[submodule "perl-DateTime-TimeZone"]
+	path = perl-DateTime-TimeZone
+	url = https://src.fedoraproject.org/rpms/perl-DateTime-TimeZone.git
+[submodule "perl-DateTimeX-Easy"]
+	path = perl-DateTimeX-Easy
+	url = https://src.fedoraproject.org/rpms/perl-DateTimeX-Easy.git
+[submodule "perl-DBD-Mock"]
+	path = perl-DBD-Mock
+	url = https://src.fedoraproject.org/rpms/perl-DBD-Mock.git
+[submodule "perl-DBICx-TestDatabase"]
+	path = perl-DBICx-TestDatabase
+	url = https://src.fedoraproject.org/rpms/perl-DBICx-TestDatabase.git
+[submodule "perl-DBIx-Class-Candy"]
+	path = perl-DBIx-Class-Candy
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-Candy.git
+[submodule "perl-DBIx-Class-DeploymentHandler"]
+	path = perl-DBIx-Class-DeploymentHandler
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-DeploymentHandler.git
+[submodule "perl-DBIx-Class-DynamicDefault"]
+	path = perl-DBIx-Class-DynamicDefault
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-DynamicDefault.git
+[submodule "perl-DBIx-Class-Helpers"]
+	path = perl-DBIx-Class-Helpers
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-Helpers.git
+[submodule "perl-DBIx-Class-Schema-Loader"]
+	path = perl-DBIx-Class-Schema-Loader
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-Schema-Loader.git
+[submodule "perl-DBIx-Class-TimeStamp"]
+	path = perl-DBIx-Class-TimeStamp
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Class-TimeStamp.git
+[submodule "perl-DBIx-Introspector"]
+	path = perl-DBIx-Introspector
+	url = https://src.fedoraproject.org/rpms/perl-DBIx-Introspector.git
+[submodule "perl-Devel-Declare"]
+	path = perl-Devel-Declare
+	url = https://src.fedoraproject.org/rpms/perl-Devel-Declare.git
+[submodule "perl-Devel-OverrideGlobalRequire"]
+	path = perl-Devel-OverrideGlobalRequire
+	url = https://src.fedoraproject.org/rpms/perl-Devel-OverrideGlobalRequire.git
+[submodule "perl-Devel-REPL"]
+	path = perl-Devel-REPL
+	url = https://src.fedoraproject.org/rpms/perl-Devel-REPL.git
+[submodule "perl-Digest-MD5-File"]
+	path = perl-Digest-MD5-File
+	url = https://src.fedoraproject.org/rpms/perl-Digest-MD5-File.git
+[submodule "perl-Directory-Scratch"]
+	path = perl-Directory-Scratch
+	url = https://src.fedoraproject.org/rpms/perl-Directory-Scratch.git
+[submodule "perl-Email-Valid"]
+	path = perl-Email-Valid
+	url = https://src.fedoraproject.org/rpms/perl-Email-Valid.git
+[submodule "perl-EV"]
+	path = perl-EV
+	url = https://src.fedoraproject.org/rpms/perl-EV.git
+[submodule "perl-Exception-Class-TryCatch"]
+	path = perl-Exception-Class-TryCatch
+	url = https://src.fedoraproject.org/rpms/perl-Exception-Class-TryCatch.git
+[submodule "perl-Exporter-Lite"]
+	path = perl-Exporter-Lite
+	url = https://src.fedoraproject.org/rpms/perl-Exporter-Lite.git
+[submodule "perl-Exporter-Tiny"]
+	path = perl-Exporter-Tiny
+	url = https://src.fedoraproject.org/rpms/perl-Exporter-Tiny.git
+[submodule "perl-File-MMagic"]
+	path = perl-File-MMagic
+	url = https://src.fedoraproject.org/rpms/perl-File-MMagic.git
+[submodule "perl-Getopt-Usaginator"]
+	path = perl-Getopt-Usaginator
+	url = https://src.fedoraproject.org/rpms/perl-Getopt-Usaginator.git
+[submodule "perl-Gravatar-URL"]
+	path = perl-Gravatar-URL
+	url = https://src.fedoraproject.org/rpms/perl-Gravatar-URL.git
+[submodule "perl-Guard"]
+	path = perl-Guard
+	url = https://src.fedoraproject.org/rpms/perl-Guard.git
+[submodule "perl-Hash-Util-FieldHash-Compat"]
+	path = perl-Hash-Util-FieldHash-Compat
+	url = https://src.fedoraproject.org/rpms/perl-Hash-Util-FieldHash-Compat.git
+[submodule "perl-HTML-Form"]
+	path = perl-HTML-Form
+	url = https://src.fedoraproject.org/rpms/perl-HTML-Form.git
+[submodule "perl-HTML-FormatText-WithLinks"]
+	path = perl-HTML-FormatText-WithLinks
+	url = https://src.fedoraproject.org/rpms/perl-HTML-FormatText-WithLinks.git
+[submodule "perl-HTML-FormatText-WithLinks-AndTables"]
+	path = perl-HTML-FormatText-WithLinks-AndTables
+	url = https://src.fedoraproject.org/rpms/perl-HTML-FormatText-WithLinks-AndTables.git
+[submodule "perl-HTML-Lint"]
+	path = perl-HTML-Lint
+	url = https://src.fedoraproject.org/rpms/perl-HTML-Lint.git
+[submodule "perl-HTML-Scrubber"]
+	path = perl-HTML-Scrubber
+	url = https://src.fedoraproject.org/rpms/perl-HTML-Scrubber.git
+[submodule "perl-HTTP-Body"]
+	path = perl-HTTP-Body
+	url = https://src.fedoraproject.org/rpms/perl-HTTP-Body.git
+[submodule "perl-HTTP-CookieJar"]
+	path = perl-HTTP-CookieJar
+	url = https://src.fedoraproject.org/rpms/perl-HTTP-CookieJar.git
+[submodule "perl-HTTP-Exception"]
+	path = perl-HTTP-Exception
+	url = https://src.fedoraproject.org/rpms/perl-HTTP-Exception.git
+[submodule "perl-HTTP-Response-Encoding"]
+	path = perl-HTTP-Response-Encoding
+	url = https://src.fedoraproject.org/rpms/perl-HTTP-Response-Encoding.git
+[submodule "perl-HTTP-Server-Simple"]
+	path = perl-HTTP-Server-Simple
+	url = https://src.fedoraproject.org/rpms/perl-HTTP-Server-Simple.git
+[submodule "perl-IO-AIO"]
+	path = perl-IO-AIO
+	url = https://src.fedoraproject.org/rpms/perl-IO-AIO.git
+[submodule "perl-IO-Async"]
+	path = perl-IO-Async
+	url = https://src.fedoraproject.org/rpms/perl-IO-Async.git
+[submodule "perl-IO-Interactive"]
+	path = perl-IO-Interactive
+	url = https://src.fedoraproject.org/rpms/perl-IO-Interactive.git
+[submodule "perl-IO-Socket-SSL"]
+	path = perl-IO-Socket-SSL
+	url = https://src.fedoraproject.org/rpms/perl-IO-Socket-SSL.git
+[submodule "perl-IPC-Signal"]
+	path = perl-IPC-Signal
+	url = https://src.fedoraproject.org/rpms/perl-IPC-Signal.git
+[submodule "perl-libnet"]
+	path = perl-libnet
+	url = https://src.fedoraproject.org/rpms/perl-libnet.git
+[submodule "perl-Lingua-EN-FindNumber"]
+	path = perl-Lingua-EN-FindNumber
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-FindNumber.git
+[submodule "perl-Lingua-EN-Inflect-Number"]
+	path = perl-Lingua-EN-Inflect-Number
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Inflect-Number.git
+[submodule "perl-Lingua-EN-Inflect-Phrase"]
+	path = perl-Lingua-EN-Inflect-Phrase
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Inflect-Phrase.git
+[submodule "perl-Lingua-EN-Number-IsOrdinal"]
+	path = perl-Lingua-EN-Number-IsOrdinal
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Number-IsOrdinal.git
+[submodule "perl-Lingua-EN-Tagger"]
+	path = perl-Lingua-EN-Tagger
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Tagger.git
+[submodule "perl-Lingua-EN-Words2Nums"]
+	path = perl-Lingua-EN-Words2Nums
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Words2Nums.git
+[submodule "perl-Lingua-PT-Stemmer"]
+	path = perl-Lingua-PT-Stemmer
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-PT-Stemmer.git
+[submodule "perl-Lingua-Stem"]
+	path = perl-Lingua-Stem
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-Stem.git
+[submodule "perl-Lingua-Stem-Fr"]
+	path = perl-Lingua-Stem-Fr
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-Stem-Fr.git
+[submodule "perl-Lingua-Stem-It"]
+	path = perl-Lingua-Stem-It
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-Stem-It.git
+[submodule "perl-Lingua-Stem-Ru"]
+	path = perl-Lingua-Stem-Ru
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-Stem-Ru.git
+[submodule "perl-Lingua-Stem-Snowball-Da"]
+	path = perl-Lingua-Stem-Snowball-Da
+	url = https://src.fedoraproject.org/rpms/perl-Lingua-Stem-Snowball-Da.git
+[submodule "perl-Locale-Codes"]
+	path = perl-Locale-Codes
+	url = https://src.fedoraproject.org/rpms/perl-Locale-Codes.git
+[submodule "perl-Log-Dispatch-Config"]
+	path = perl-Log-Dispatch-Config
+	url = https://src.fedoraproject.org/rpms/perl-Log-Dispatch-Config.git
+[submodule "perl-Log-Dispatch-Configurator-Any"]
+	path = perl-Log-Dispatch-Configurator-Any
+	url = https://src.fedoraproject.org/rpms/perl-Log-Dispatch-Configurator-Any.git
+[submodule "perl-Math-Random-ISAAC"]
+	path = perl-Math-Random-ISAAC
+	url = https://src.fedoraproject.org/rpms/perl-Math-Random-ISAAC.git
+[submodule "perl-Math-Round"]
+	path = perl-Math-Round
+	url = https://src.fedoraproject.org/rpms/perl-Math-Round.git
+[submodule "perl-Method-Signatures-Simple"]
+	path = perl-Method-Signatures-Simple
+	url = https://src.fedoraproject.org/rpms/perl-Method-Signatures-Simple.git
+[submodule "perl-Module-Install-ExtraTests"]
+	path = perl-Module-Install-ExtraTests
+	url = https://src.fedoraproject.org/rpms/perl-Module-Install-ExtraTests.git
+[submodule "perl-Module-Util"]
+	path = perl-Module-Util
+	url = https://src.fedoraproject.org/rpms/perl-Module-Util.git
+[submodule "perl-Moo"]
+	path = perl-Moo
+	url = https://src.fedoraproject.org/rpms/perl-Moo.git
+[submodule "perl-MooseX-Aliases"]
+	path = perl-MooseX-Aliases
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Aliases.git
+[submodule "perl-MooseX-ClassAttribute"]
+	path = perl-MooseX-ClassAttribute
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-ClassAttribute.git
+[submodule "perl-MooseX-Clone"]
+	path = perl-MooseX-Clone
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Clone.git
+[submodule "perl-MooseX-Declare"]
+	path = perl-MooseX-Declare
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Declare.git
+[submodule "perl-MooseX-LazyRequire"]
+	path = perl-MooseX-LazyRequire
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-LazyRequire.git
+[submodule "perl-MooseX-Meta-TypeConstraint-ForceCoercion"]
+	path = perl-MooseX-Meta-TypeConstraint-ForceCoercion
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Meta-TypeConstraint-ForceCoercion.git
+[submodule "perl-MooseX-Method-Signatures"]
+	path = perl-MooseX-Method-Signatures
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Method-Signatures.git
+[submodule "perl-MooseX-NonMoose"]
+	path = perl-MooseX-NonMoose
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-NonMoose.git
+[submodule "perl-MooseX-Params-Validate"]
+	path = perl-MooseX-Params-Validate
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Params-Validate.git
+[submodule "perl-MooseX-Singleton"]
+	path = perl-MooseX-Singleton
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Singleton.git
+[submodule "perl-MooseX-Storage"]
+	path = perl-MooseX-Storage
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Storage.git
+[submodule "perl-MooseX-StrictConstructor"]
+	path = perl-MooseX-StrictConstructor
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-StrictConstructor.git
+[submodule "perl-MooseX-Traits"]
+	path = perl-MooseX-Traits
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Traits.git
+[submodule "perl-MooseX-Types-DateTime"]
+	path = perl-MooseX-Types-DateTime
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Types-DateTime.git
+[submodule "perl-MooseX-Types-DateTime-MoreCoercions"]
+	path = perl-MooseX-Types-DateTime-MoreCoercions
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Types-DateTime-MoreCoercions.git
+[submodule "perl-MooseX-Types-Structured"]
+	path = perl-MooseX-Types-Structured
+	url = https://src.fedoraproject.org/rpms/perl-MooseX-Types-Structured.git
+[submodule "perl-MooX-TypeTiny"]
+	path = perl-MooX-TypeTiny
+	url = https://src.fedoraproject.org/rpms/perl-MooX-TypeTiny.git
+[submodule "perl-MouseX-Types-Common"]
+	path = perl-MouseX-Types-Common
+	url = https://src.fedoraproject.org/rpms/perl-MouseX-Types-Common.git
+[submodule "perl-Mozilla-PublicSuffix"]
+	path = perl-Mozilla-PublicSuffix
+	url = https://src.fedoraproject.org/rpms/perl-Mozilla-PublicSuffix.git
+[submodule "perl-Net-Amazon-S3"]
+	path = perl-Net-Amazon-S3
+	url = https://src.fedoraproject.org/rpms/perl-Net-Amazon-S3.git
+[submodule "perl-Net-IDN-Encode"]
+	path = perl-Net-IDN-Encode
+	url = https://src.fedoraproject.org/rpms/perl-Net-IDN-Encode.git
+[submodule "perl-Net-Server-SS-PreFork"]
+	path = perl-Net-Server-SS-PreFork
+	url = https://src.fedoraproject.org/rpms/perl-Net-Server-SS-PreFork.git
+[submodule "perl-Net-Telnet"]
+	path = perl-Net-Telnet
+	url = https://src.fedoraproject.org/rpms/perl-Net-Telnet.git
+[submodule "perl-Package-Pkg"]
+	path = perl-Package-Pkg
+	url = https://src.fedoraproject.org/rpms/perl-Package-Pkg.git
+[submodule "perl-Parallel-Prefork"]
+	path = perl-Parallel-Prefork
+	url = https://src.fedoraproject.org/rpms/perl-Parallel-Prefork.git
+[submodule "perl-Parallel-Scoreboard"]
+	path = perl-Parallel-Scoreboard
+	url = https://src.fedoraproject.org/rpms/perl-Parallel-Scoreboard.git
+[submodule "perl-Parse-Method-Signatures"]
+	path = perl-Parse-Method-Signatures
+	url = https://src.fedoraproject.org/rpms/perl-Parse-Method-Signatures.git
+[submodule "perl-Perl6-Junction"]
+	path = perl-Perl6-Junction
+	url = https://src.fedoraproject.org/rpms/perl-Perl6-Junction.git
+[submodule "perl-Plack-Middleware-Deflater"]
+	path = perl-Plack-Middleware-Deflater
+	url = https://src.fedoraproject.org/rpms/perl-Plack-Middleware-Deflater.git
+[submodule "perl-Plack-Middleware-Session"]
+	path = perl-Plack-Middleware-Session
+	url = https://src.fedoraproject.org/rpms/perl-Plack-Middleware-Session.git
+[submodule "perl-Proc-Wait3"]
+	path = perl-Proc-Wait3
+	url = https://src.fedoraproject.org/rpms/perl-Proc-Wait3.git
+[submodule "perl-Protocol-HTTP2"]
+	path = perl-Protocol-HTTP2
+	url = https://src.fedoraproject.org/rpms/perl-Protocol-HTTP2.git
+[submodule "perl-Scalar-String"]
+	path = perl-Scalar-String
+	url = https://src.fedoraproject.org/rpms/perl-Scalar-String.git
+[submodule "perl-Server-Starter"]
+	path = perl-Server-Starter
+	url = https://src.fedoraproject.org/rpms/perl-Server-Starter.git
+[submodule "perl-Set-Infinite"]
+	path = perl-Set-Infinite
+	url = https://src.fedoraproject.org/rpms/perl-Set-Infinite.git
+[submodule "perl-Signal-Mask"]
+	path = perl-Signal-Mask
+	url = https://src.fedoraproject.org/rpms/perl-Signal-Mask.git
+[submodule "perl-Smart-Comments"]
+	path = perl-Smart-Comments
+	url = https://src.fedoraproject.org/rpms/perl-Smart-Comments.git
+[submodule "perl-Snowball-Norwegian"]
+	path = perl-Snowball-Norwegian
+	url = https://src.fedoraproject.org/rpms/perl-Snowball-Norwegian.git
+[submodule "perl-Snowball-Swedish"]
+	path = perl-Snowball-Swedish
+	url = https://src.fedoraproject.org/rpms/perl-Snowball-Swedish.git
+[submodule "perl-SQL-SplitStatement"]
+	path = perl-SQL-SplitStatement
+	url = https://src.fedoraproject.org/rpms/perl-SQL-SplitStatement.git
+[submodule "perl-SQL-Tokenizer"]
+	path = perl-SQL-Tokenizer
+	url = https://src.fedoraproject.org/rpms/perl-SQL-Tokenizer.git
+[submodule "perl-Starman"]
+	path = perl-Starman
+	url = https://src.fedoraproject.org/rpms/perl-Starman.git
+[submodule "perl-Statistics-Basic"]
+	path = perl-Statistics-Basic
+	url = https://src.fedoraproject.org/rpms/perl-Statistics-Basic.git
+[submodule "perl-String-Approx"]
+	path = perl-String-Approx
+	url = https://src.fedoraproject.org/rpms/perl-String-Approx.git
+[submodule "perl-String-CamelCase"]
+	path = perl-String-CamelCase
+	url = https://src.fedoraproject.org/rpms/perl-String-CamelCase.git
+[submodule "perl-String-RewritePrefix"]
+	path = perl-String-RewritePrefix
+	url = https://src.fedoraproject.org/rpms/perl-String-RewritePrefix.git
+[submodule "perl-String-ToIdentifier-EN"]
+	path = perl-String-ToIdentifier-EN
+	url = https://src.fedoraproject.org/rpms/perl-String-ToIdentifier-EN.git
+[submodule "perl-String-TtyLength"]
+	path = perl-String-TtyLength
+	url = https://src.fedoraproject.org/rpms/perl-String-TtyLength.git
+[submodule "perl-Sys-SigAction"]
+	path = perl-Sys-SigAction
+	url = https://src.fedoraproject.org/rpms/perl-Sys-SigAction.git
+[submodule "perl-Term-ProgressBar-Quiet"]
+	path = perl-Term-ProgressBar-Quiet
+	url = https://src.fedoraproject.org/rpms/perl-Term-ProgressBar-Quiet.git
+[submodule "perl-Term-ProgressBar-Simple"]
+	path = perl-Term-ProgressBar-Simple
+	url = https://src.fedoraproject.org/rpms/perl-Term-ProgressBar-Simple.git
+[submodule "perl-Test-Deep-JSON"]
+	path = perl-Test-Deep-JSON
+	url = https://src.fedoraproject.org/rpms/perl-Test-Deep-JSON.git
+[submodule "perl-Test-Deep-Type"]
+	path = perl-Test-Deep-Type
+	url = https://src.fedoraproject.org/rpms/perl-Test-Deep-Type.git
+[submodule "perl-Test-Inter"]
+	path = perl-Test-Inter
+	url = https://src.fedoraproject.org/rpms/perl-Test-Inter.git
+[submodule "perl-Test-Mock-LWP"]
+	path = perl-Test-Mock-LWP
+	url = https://src.fedoraproject.org/rpms/perl-Test-Mock-LWP.git
+[submodule "perl-Test-MockRandom"]
+	path = perl-Test-MockRandom
+	url = https://src.fedoraproject.org/rpms/perl-Test-MockRandom.git
+[submodule "perl-Test-MockTime-HiRes"]
+	path = perl-Test-MockTime-HiRes
+	url = https://src.fedoraproject.org/rpms/perl-Test-MockTime-HiRes.git
+[submodule "perl-Test-RequiresInternet"]
+	path = perl-Test-RequiresInternet
+	url = https://src.fedoraproject.org/rpms/perl-Test-RequiresInternet.git
+[submodule "perl-Test-Roo"]
+	path = perl-Test-Roo
+	url = https://src.fedoraproject.org/rpms/perl-Test-Roo.git
+[submodule "perl-Test-Script-Run"]
+	path = perl-Test-Script-Run
+	url = https://src.fedoraproject.org/rpms/perl-Test-Script-Run.git
+[submodule "perl-Test-TempDir"]
+	path = perl-Test-TempDir
+	url = https://src.fedoraproject.org/rpms/perl-Test-TempDir.git
+[submodule "perl-Test-Timer"]
+	path = perl-Test-Timer
+	url = https://src.fedoraproject.org/rpms/perl-Test-Timer.git
+[submodule "perl-Test-WWW-Mechanize"]
+	path = perl-Test-WWW-Mechanize
+	url = https://src.fedoraproject.org/rpms/perl-Test-WWW-Mechanize.git
+[submodule "perl-Test-WWW-Mechanize-PSGI"]
+	path = perl-Test-WWW-Mechanize-PSGI
+	url = https://src.fedoraproject.org/rpms/perl-Test-WWW-Mechanize-PSGI.git
+[submodule "perl-Test-WWW-Selenium"]
+	path = perl-Test-WWW-Selenium
+	url = https://src.fedoraproject.org/rpms/perl-Test-WWW-Selenium.git
+[submodule "perl-Text-Brew"]
+	path = perl-Text-Brew
+	url = https://src.fedoraproject.org/rpms/perl-Text-Brew.git
+[submodule "perl-Text-German"]
+	path = perl-Text-German
+	url = https://src.fedoraproject.org/rpms/perl-Text-German.git
+[submodule "perl-Text-Table-Tiny"]
+	path = perl-Text-Table-Tiny
+	url = https://src.fedoraproject.org/rpms/perl-Text-Table-Tiny.git
+[submodule "perl-Text-vCard"]
+	path = perl-Text-vCard
+	url = https://src.fedoraproject.org/rpms/perl-Text-vCard.git
+[submodule "perl-Text-vFile-asData"]
+	path = perl-Text-vFile-asData
+	url = https://src.fedoraproject.org/rpms/perl-Text-vFile-asData.git
+[submodule "perl-Thread-SigMask"]
+	path = perl-Thread-SigMask
+	url = https://src.fedoraproject.org/rpms/perl-Thread-SigMask.git
+[submodule "perl-Throwable"]
+	path = perl-Throwable
+	url = https://src.fedoraproject.org/rpms/perl-Throwable.git
+[submodule "perl-Tie-RefHash-Weak"]
+	path = perl-Tie-RefHash-Weak
+	url = https://src.fedoraproject.org/rpms/perl-Tie-RefHash-Weak.git
+[submodule "perl-Tie-ToObject"]
+	path = perl-Tie-ToObject
+	url = https://src.fedoraproject.org/rpms/perl-Tie-ToObject.git
+[submodule "perl-Time-Duration-Parse"]
+	path = perl-Time-Duration-Parse
+	url = https://src.fedoraproject.org/rpms/perl-Time-Duration-Parse.git
+[submodule "perl-Time-Warp"]
+	path = perl-Time-Warp
+	url = https://src.fedoraproject.org/rpms/perl-Time-Warp.git
+[submodule "perl-Tree-XPathEngine"]
+	path = perl-Tree-XPathEngine
+	url = https://src.fedoraproject.org/rpms/perl-Tree-XPathEngine.git
+[submodule "perl-Type-Tiny"]
+	path = perl-Type-Tiny
+	url = https://src.fedoraproject.org/rpms/perl-Type-Tiny.git
+[submodule "perl-VM-EC2"]
+	path = perl-VM-EC2
+	url = https://src.fedoraproject.org/rpms/perl-VM-EC2.git
+[submodule "perl-VM-EC2-Security-CredentialCache"]
+	path = perl-VM-EC2-Security-CredentialCache
+	url = https://src.fedoraproject.org/rpms/perl-VM-EC2-Security-CredentialCache.git
+[submodule "perl-WWW-Mechanize"]
+	path = perl-WWW-Mechanize
+	url = https://src.fedoraproject.org/rpms/perl-WWW-Mechanize.git
+[submodule "perl-WWW-Pastebin-PastebinCom-Create"]
+	path = perl-WWW-Pastebin-PastebinCom-Create
+	url = https://src.fedoraproject.org/rpms/perl-WWW-Pastebin-PastebinCom-Create.git
+[submodule "perltidy"]
+	path = perltidy
+	url = https://src.fedoraproject.org/rpms/perltidy.git
