@@ -22,7 +22,6 @@ endef
 
 define build_rpm_binary =
 	set -euo pipefail; \
-	export OPENSSL_ENABLE_SHA1_SIGNATURES=1; \
 	mock -r $(CHROOT) --localrepo=$(REPO) --chain --enable-network "$^"
 endef
 
@@ -89,6 +88,7 @@ $(eval $(call buildpackage,perl-Config-ZOMG,))
 $(eval $(call buildpackage,perl-Coro,perl-Guard perl-EV))
 $(eval $(call buildpackage,perl-Crypt-JWT,))
 $(eval $(call buildpackage,perl-Crypt-MySQL,))
+$(eval $(call buildpackage,perl-Crypt-OpenSSL-DSA,))
 $(eval $(call buildpackage,perl-Crypt-OpenSSL-Guess,))
 $(eval $(call buildpackage,perl-Crypt-PW44,))
 $(eval $(call buildpackage,perl-Crypt-Random-Seed,))
@@ -328,6 +328,7 @@ $(eval $(call buildpackage,perl-WWW-FCM-HTTP,))
 $(eval $(call buildpackage,perl-WWW-JSON,))
 $(eval $(call buildpackage,perl-WWW-Mechanize,))
 $(eval $(call buildpackage,perl-WWW-Pastebin-PastebinCom-Create,))
+$(eval $(call buildpackage,perl-XML-Sig,perl-Crypt-OpenSSL-DSA perl-Crypt-OpenSSL-Guess))
 
 
 all: $(ALL_PACKAGES)
