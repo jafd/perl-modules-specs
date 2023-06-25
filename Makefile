@@ -17,8 +17,7 @@ define build_rpm_source =
 	$(eval specdir := $(shell dirname "$^"))
 	set -euo pipefail; \
 	mkdir -p $(builddir) && \
-	spectool --get-files --all --directory $(specdir) "$^" && \
-	rpmbuild -bs --define '_sourcedir $(specdir)' --define '_srcrpmdir $(builddir)' $(RPMSPECFLAGS) "$^"
+	rpmbuild -bs --define '_disable_source_fetch 0' --define '_sourcedir $(specdir)' --define '_srcrpmdir $(builddir)' $(RPMSPECFLAGS) "$^"
 endef
 
 define build_rpm_binary =
@@ -125,7 +124,7 @@ $(eval $(call buildpackage,perl-DateTimeX-Easy,))
 $(eval $(call buildpackage,perl-DBD-Mock,))
 $(eval $(call buildpackage,perl-DBICx-TestDatabase,))
 $(eval $(call buildpackage,perl-DBIx-Class-Candy,))
-$(eval $(call buildpackage,perl-DBIx-Class-DeploymentHandler,))
+$(eval $(call buildpackage,perl-DBIx-Class-DeploymentHandler,perl-SQL-SplitStatement perl-DBIx-Class-Schema-Loader perl-Text-Brew))
 $(eval $(call buildpackage,perl-DBIx-Class-DynamicDefault,))
 $(eval $(call buildpackage,perl-DBIx-Class-Helpers,))
 $(eval $(call buildpackage,perl-DBIx-Class-InflateColumn-Authen-Passphrase,))
