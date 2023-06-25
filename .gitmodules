@@ -595,3 +595,6 @@
 [submodule "perltidy"]
 	path = perltidy
 	url = https://src.fedoraproject.org/rpms/perltidy.git
+[submodule "perl-Class-Accessor-Chained"]
+	path = perl-Class-Accessor-Chained
+	url = https://src.fedoraproject.org/rpms/perl-Class-Accessor-Chained.git
