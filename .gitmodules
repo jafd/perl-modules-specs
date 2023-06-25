@@ -85,9 +85,6 @@
 [submodule "perl-Crypt-MySQL"]
 	path = perl-Crypt-MySQL
 	url = https://src.fedoraproject.org/rpms/perl-Crypt-MySQL.git
-[submodule "perl-Crypt-OpenSSL-DSA"]
-	path = perl-Crypt-OpenSSL-DSA
-	url = https://src.fedoraproject.org/rpms/perl-Crypt-OpenSSL-DSA.git
 [submodule "perl-Crypt-OpenSSL-Guess"]
 	path = perl-Crypt-OpenSSL-Guess
 	url = https://src.fedoraproject.org/rpms/perl-Crypt-OpenSSL-Guess.git
