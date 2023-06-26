@@ -585,7 +585,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-VM-EC2-Security-CredentialCache.git
 [submodule "perl-WWW-Mechanize"]
 	path = perl-WWW-Mechanize
-	url = https://src.fedoraproject.org/rpms/perl-WWW-Mechanize.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-WWW-Mechanize.git
 [submodule "perl-WWW-Pastebin-PastebinCom-Create"]
 	path = perl-WWW-Pastebin-PastebinCom-Create
 	url = https://src.fedoraproject.org/rpms/perl-WWW-Pastebin-PastebinCom-Create.git
