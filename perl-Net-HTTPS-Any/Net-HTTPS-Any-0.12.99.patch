@@ -212,7 +212,7 @@ index 9ca788f..794f7b4 100644
  
  my($content, $response, %headers) = https_get(
 -  { 'host' => 'www.fortify.net',
-+  { 'host' => 'httpbin.org',
++  { 'host' => 'postman-echo.com',
      'port' => 443,
 -    'path' => '/sslcheck.html',
 +    'path' => '/get',
@@ -231,7 +231,7 @@ index 9ca788f..794f7b4 100644
  
  my($content2, $response2, %headers2) = https_get(
 -  { 'host' => 'www.fortify.net',
-+  { 'host' => 'httpbin.org',
++  { 'host' => 'postman-echo.com',
      'port' => 443,
 -    'path' => '/notfound.html',
 +    'path' => '/status/404',
@@ -253,7 +253,7 @@ index 80c2863..a02526c 100644
  #200
  my($content, $response, %headers) = https_post(
 -  { 'host' => 'accounts.google.com',
-+  { 'host' => 'httpbin.org',
++  { 'host' => 'postman-echo.com',
      'port' => 443,
 -    'path' => '/ServiceLogin',
 +    'path' => '/post',
@@ -272,7 +272,7 @@ index 80c2863..a02526c 100644
  
  my($content2, $response2, %headers2) = https_post(
 -  { 'host' => 'www.google.com',
-+  { 'host' => 'httpbin.org',
++  { 'host' => 'postman-echo.com',
      'port' => 443,
 -    'path' => '/notfound.html',
 +    'path' => '/status/404',
