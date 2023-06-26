@@ -234,7 +234,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Hash-Util-FieldHash-Compat.git
 [submodule "perl-HTML-Form"]
 	path = perl-HTML-Form
-	url = https://src.fedoraproject.org/rpms/perl-HTML-Form.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-HTML-Form.git
 [submodule "perl-HTML-FormatText-WithLinks"]
 	path = perl-HTML-FormatText-WithLinks
 	url = https://src.fedoraproject.org/rpms/perl-HTML-FormatText-WithLinks.git
@@ -285,7 +285,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-FindNumber.git
 [submodule "perl-Lingua-EN-Inflect-Number"]
 	path = perl-Lingua-EN-Inflect-Number
-	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Inflect-Number.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Lingua-EN-Inflect-Number.git
 [submodule "perl-Lingua-EN-Inflect-Phrase"]
 	path = perl-Lingua-EN-Inflect-Phrase
 	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-Inflect-Phrase.git
