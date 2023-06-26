@@ -246,7 +246,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-HTML-Lint.git
 [submodule "perl-HTML-Scrubber"]
 	path = perl-HTML-Scrubber
-	url = https://src.fedoraproject.org/rpms/perl-HTML-Scrubber.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-HTML-Scrubber.git
 [submodule "perl-HTTP-Body"]
 	path = perl-HTTP-Body
 	url = https://src.fedoraproject.org/rpms/perl-HTTP-Body.git
