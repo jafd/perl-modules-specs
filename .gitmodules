@@ -595,3 +595,6 @@
 [submodule "perl-Class-Accessor-Chained"]
 	path = perl-Class-Accessor-Chained
 	url = https://src.fedoraproject.org/rpms/perl-Class-Accessor-Chained.git
+[submodule "perl-B-Compiling"]
+	path = perl-B-Compiling
+	url = https://src.fedoraproject.org/rpms/perl-B-Compiling.git
