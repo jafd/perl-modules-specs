@@ -1,6 +1,6 @@
 Name:           perl-Paws
-Version:        0.44
-Release:        2%{?dist}
+Version:        0.45
+Release:        1%{?dist}
 Summary:        Perl SDK for AWS (Amazon Web Services) APIs
 License:        Apache Software License
 Group:          Development/Libraries
@@ -29,6 +29,7 @@ BuildRequires:  perl(HTTP::Tiny)
 BuildRequires:  perl(IO::Socket::SSL)
 BuildRequires:  perl(JSON::MaybeXS)
 BuildRequires:  perl(Module::Build)
+BuildRequires:  perl(Module::Build::Tiny)
 BuildRequires:  perl(Module::Find)
 BuildRequires:  perl(Moose)
 BuildRequires:  perl(MooseX::ClassAttribute)
@@ -51,6 +52,7 @@ BuildRequires:  perl(YAML)
 BuildRequires:  perl(Time::HiRes)
 BuildRequires:  perl(Furl)
 BuildRequires:  perl(Future::Mojo)
+BuildRequires:  perl(English)
 Requires:       perl(Time::HiRes)
 Requires:       perl(ARGV::Struct)
 Requires:       perl(Browser::Open)
@@ -61,6 +63,7 @@ Requires:       perl(DateTime)
 Requires:       perl(DateTime::Format::ISO8601)
 Requires:       perl(Digest::SHA)
 Requires:       perl(File::HomeDir)
+Requires:       perl(Future::Mojo)
 Requires:       perl(Getopt::Long)
 Requires:       perl(HTTP::Tiny)
 Requires:       perl(IO::Socket::SSL)
@@ -117,11 +120,18 @@ rm -rf %{buildroot}
 %doc benchmarks Changes cpanfile dist.ini examples LICENSE META.json README.md script
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+%{_mandir}/man1/*
 %{_bindir}/open_aws_console
 %{_bindir}/paws
 %{_bindir}/paws_make_testcase
 
 %changelog
+* Tue Jun 27 2023 Yaroslav Fedevych <yaroslav@fedevych.name> 0.45-1
+- There is a new upstream release, unindexed by CPAN
+
+* Mon Jun 26 2023 Yaroslav Fedevych <yaroslav@fedevych.name> 0.44-3
+- Looks like Paws configure-depends on Module::Build::Tiny
+
 * Fri Jun 16 2023 Yaroslav Fedevych <yaroslav@fedevych.name> 0.44-2
 - Fixed dependencies (both underspecified and overspecified)
 
