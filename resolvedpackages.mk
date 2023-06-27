@@ -1089,7 +1089,7 @@ ALL_PACKAGES += perl-DBIx-Class-InflateColumn-Currency
 .stamps/perl-DBIx-Class-InflateColumn-Currency/perl-DBIx-Class-InflateColumn-Currency.spec.built-stamp: .repo/results/centos-stream+epel-9-x86_64/perl-DBIx-Class-InflateColumn-Currency-0.02005-1.el9/perl-DBIx-Class-InflateColumn-Currency-0.02005-1.el9.noarch.rpm 
 	mkdir -p $$(dirname "$@") && touch "$@"
 
-perl-DBIx-Class-InflateColumn-Currency:  .stamps/perl-DBIx-Class-InflateColumn-Currency/perl-DBIx-Class-InflateColumn-Currency.spec.built-stamp
+perl-DBIx-Class-InflateColumn-Currency: perl-Data-Currency .stamps/perl-DBIx-Class-InflateColumn-Currency/perl-DBIx-Class-InflateColumn-Currency.spec.built-stamp
  
 ALL_PACKAGES += perl-DBIx-Class-PassphraseColumn
 
