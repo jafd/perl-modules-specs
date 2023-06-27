@@ -4,8 +4,8 @@ Release:        1%{?dist}
 Summary:        XML::Sig - A toolkit to help sign and verify XML Digital Signatures
 License:        GPL+ or Artistic
 Group:          Development/Libraries
-URL:            http://search.cpan.org/dist/XML-Sig/
-Source0:        http://www.cpan.org/authors/id/T/TI/TIMLEGGE/XML-Sig-%{version}.tar.gz
+URL:            https://search.cpan.org/dist/XML-Sig/
+Source0:        https://www.cpan.org/authors/id/T/TI/TIMLEGGE/XML-Sig-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  perl-interpreter >= 0:5.008
