@@ -1,6 +1,7 @@
 RPMSPECFLAGS := --define 'dist .el9'
 RPMSPEC = rpmspec --query $(RPMSPECFLAGS)
 CHROOT := centos-stream+epel-9-$(shell arch)
+# CHROOT := rocky+epel-9-$(shell arch)
 REPO := .repo
 
 srpm_basename = $(shell $(RPMSPEC) --srpm --query --queryformat '%{name}-%{version}-%{release}' $(1))
@@ -133,7 +134,7 @@ PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-DynamicDefault,perl-DBICx-Te
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-Helpers,perl-Test-Roo perl-Text-Brew perl-DBIx-Class-Candy perl-DBIx-Introspector)
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-InflateColumn-Authen-Passphrase,)
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-InflateColumn-Currency,)
-PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-PassphraseColumn,)
+PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-PassphraseColumn,perl-Authen-Passphrase)
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-Schema-Loader,perl-curry perl-Lingua-EN-Inflect-Number perl-Lingua-EN-Inflect-Phrase perl-Lingua-EN-Tagger perl-String-CamelCase perl-String-ToIdentifier-EN)
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-Schema-PopulateMore,)
 PACKAGE_DEFS += $(call buildpackage,perl-DBIx-Class-Storage-TxnEndHook,)
