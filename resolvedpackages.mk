@@ -1076,7 +1076,7 @@ ALL_PACKAGES += perl-DBIx-Class-InflateColumn-Authen-Passphrase
 .stamps/perl-DBIx-Class-InflateColumn-Authen-Passphrase/perl-DBIx-Class-InflateColumn-Authen-Passphrase.spec.built-stamp: .repo/results/centos-stream+epel-9-x86_64/perl-DBIx-Class-InflateColumn-Authen-Passphrase-0.03-1.el9/perl-DBIx-Class-InflateColumn-Authen-Passphrase-0.03-1.el9.noarch.rpm 
 	mkdir -p $$(dirname "$@") && touch "$@"
 
-perl-DBIx-Class-InflateColumn-Authen-Passphrase:  .stamps/perl-DBIx-Class-InflateColumn-Authen-Passphrase/perl-DBIx-Class-InflateColumn-Authen-Passphrase.spec.built-stamp
+perl-DBIx-Class-InflateColumn-Authen-Passphrase: perl-Authen-Passphrase .stamps/perl-DBIx-Class-InflateColumn-Authen-Passphrase/perl-DBIx-Class-InflateColumn-Authen-Passphrase.spec.built-stamp
  
 ALL_PACKAGES += perl-DBIx-Class-InflateColumn-Currency
 
