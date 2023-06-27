@@ -1102,7 +1102,7 @@ ALL_PACKAGES += perl-DBIx-Class-PassphraseColumn
 .stamps/perl-DBIx-Class-PassphraseColumn/perl-DBIx-Class-PassphraseColumn.spec.built-stamp: .repo/results/centos-stream+epel-9-x86_64/perl-DBIx-Class-PassphraseColumn-0.05-1.el9/perl-DBIx-Class-PassphraseColumn-0.05-1.el9.noarch.rpm 
 	mkdir -p $$(dirname "$@") && touch "$@"
 
-perl-DBIx-Class-PassphraseColumn:  .stamps/perl-DBIx-Class-PassphraseColumn/perl-DBIx-Class-PassphraseColumn.spec.built-stamp
+perl-DBIx-Class-PassphraseColumn: perl-Authen-Passphrase .stamps/perl-DBIx-Class-PassphraseColumn/perl-DBIx-Class-PassphraseColumn.spec.built-stamp
  
 ALL_PACKAGES += perl-DBIx-Class-Schema-Loader
 
@@ -2292,10 +2292,10 @@ ALL_PACKAGES += perl-MooseX-Traits
 .srpms/perl-MooseX-Traits-0.13-22.el9.src.rpm: perl-MooseX-Traits/perl-MooseX-Traits.spec
 	$(build_rpm_source)
 
-.repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-0.13-22.el9.noarch.rpm .repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-tests-0.13-22.el9.noarch.rpm : .srpms/perl-MooseX-Traits-0.13-22.el9.src.rpm
+.repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-0.13-22.el9.noarch.rpm : .srpms/perl-MooseX-Traits-0.13-22.el9.src.rpm
 	$(build_rpm_binary)
 
-.stamps/perl-MooseX-Traits/perl-MooseX-Traits.spec.built-stamp: .repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-0.13-22.el9.noarch.rpm .repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-tests-0.13-22.el9.noarch.rpm 
+.stamps/perl-MooseX-Traits/perl-MooseX-Traits.spec.built-stamp: .repo/results/centos-stream+epel-9-x86_64/perl-MooseX-Traits-0.13-22.el9/perl-MooseX-Traits-0.13-22.el9.noarch.rpm 
 	mkdir -p $$(dirname "$@") && touch "$@"
 
 perl-MooseX-Traits:  .stamps/perl-MooseX-Traits/perl-MooseX-Traits.spec.built-stamp
