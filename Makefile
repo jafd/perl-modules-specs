@@ -357,6 +357,4 @@ all-packages:
 clean:
 	rm -fr $(REPO)/results .srpms/*.src.rpm
 
-ALLDIRS := $(shell find . -maxdepth 1 -type d -not -name ".*")
-
 .PHONY: clean all all-packages $(ALL_PACKAGES)
