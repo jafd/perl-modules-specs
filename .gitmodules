@@ -33,7 +33,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Carp-Assert-More.git
 [submodule "perl-Carp-Clan-Share"]
 	path = perl-Carp-Clan-Share
-	url = https://src.fedoraproject.org/rpms/perl-Carp-Clan-Share.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Carp-Clan-Share.git
 [submodule "perl-CGI-Application"]
 	path = perl-CGI-Application
 	url = https://src.fedoraproject.org/rpms/perl-CGI-Application.git
@@ -81,7 +81,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Config-ZOMG.git
 [submodule "perl-Coro"]
 	path = attic/perl-Coro
-	url = https://src.fedoraproject.org/rpms/perl-Coro.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Coro.git
 [submodule "perl-Crypt-MySQL"]
 	path = perl-Crypt-MySQL
 	url = https://src.fedoraproject.org/rpms/perl-Crypt-MySQL.git
@@ -135,7 +135,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-DateTime-Event-Recurrence.git
 [submodule "perl-DateTime-Format-DateManip"]
 	path = perl-DateTime-Format-DateManip
-	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-DateManip.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-DateTime-Format-DateManip.git
 [submodule "perl-DateTime-Format-Flexible"]
 	path = perl-DateTime-Format-Flexible
 	url = https://src.fedoraproject.org/rpms/perl-DateTime-Format-Flexible.git
@@ -204,10 +204,10 @@
 	url = https://src.fedoraproject.org/rpms/perl-Directory-Scratch.git
 [submodule "perl-Email-Valid"]
 	path = perl-Email-Valid
-	url = https://src.fedoraproject.org/rpms/perl-Email-Valid.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Email-Valid.git
 [submodule "perl-EV"]
 	path = perl-EV
-	url = https://src.fedoraproject.org/rpms/perl-EV.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-EV.git
 [submodule "perl-Exception-Class-TryCatch"]
 	path = perl-Exception-Class-TryCatch
 	url = https://src.fedoraproject.org/rpms/perl-Exception-Class-TryCatch.git
@@ -279,7 +279,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-IPC-Signal.git
 [submodule "perl-libnet"]
 	path = perl-libnet
-	url = https://src.fedoraproject.org/rpms/perl-libnet.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-libnet.git
 [submodule "perl-Lingua-EN-FindNumber"]
 	path = perl-Lingua-EN-FindNumber
 	url = https://src.fedoraproject.org/rpms/perl-Lingua-EN-FindNumber.git
@@ -321,7 +321,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Locale-Codes.git
 [submodule "perl-Log-Dispatch-Config"]
 	path = perl-Log-Dispatch-Config
-	url = https://src.fedoraproject.org/rpms/perl-Log-Dispatch-Config.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Log-Dispatch-Config.git
 [submodule "perl-Log-Dispatch-Configurator-Any"]
 	path = perl-Log-Dispatch-Configurator-Any
 	url = https://src.fedoraproject.org/rpms/perl-Log-Dispatch-Configurator-Any.git
@@ -507,7 +507,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Test-Inter.git
 [submodule "perl-Test-Mock-LWP"]
 	path = perl-Test-Mock-LWP
-	url = https://src.fedoraproject.org/rpms/perl-Test-Mock-LWP.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Test-Mock-LWP.git
 [submodule "perl-Test-MockRandom"]
 	path = perl-Test-MockRandom
 	url = https://src.fedoraproject.org/rpms/perl-Test-MockRandom.git
@@ -573,7 +573,7 @@
 	url = https://src.fedoraproject.org/rpms/perl-Time-Warp.git
 [submodule "perl-Tree-XPathEngine"]
 	path = perl-Tree-XPathEngine
-	url = https://src.fedoraproject.org/rpms/perl-Tree-XPathEngine.git
+	url = https://src.fedoraproject.org/forks/jafd/rpms/perl-Tree-XPathEngine.git
 [submodule "perl-Type-Tiny"]
 	path = perl-Type-Tiny
 	url = https://src.fedoraproject.org/rpms/perl-Type-Tiny.git

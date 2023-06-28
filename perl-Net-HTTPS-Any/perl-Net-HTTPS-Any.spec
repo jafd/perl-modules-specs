@@ -1,6 +1,6 @@
 Name:           perl-Net-HTTPS-Any
 Version:        0.12
-Release:        100%{?dist}
+Release:        101%{?dist}
 Summary:        Simple HTTPS client
 License:        CHECK(Distributable)
 Group:          Development/Libraries
@@ -45,7 +45,7 @@ use of Business::OnlinePayment.
 
 %prep
 %setup -q -n Net-HTTPS-Any-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -74,6 +74,9 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 
 %changelog
+* Tue Jun 27 2023 yaroslav@fedevych.name 0.12-101
+- Use a non-deprecated form of %patch
+
 * Tue Jan 31 2023 yaroslav@fedevych.name 0.12-100
 - Pass Content-Length to POST requests
 
